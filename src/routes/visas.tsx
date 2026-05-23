@@ -130,7 +130,7 @@ function Visas() {
                     <div className="bg-accent/10 p-3 text-accent">
                       <FileText className="w-6 h-6" />
                     </div>
-                    <span className="font-serif text-xs text-brand/60 tracking-wider">01 / Required Files</span>
+                    <span className="font-serif text-xs text-brand/100 tracking-wider">01 / Required Files</span>
                   </div>
                   <h3 className="font-serif text-2xl mb-4 text-brand">Visitor's Documents</h3>
                   <ul className="text-sm font-light text-brand/85 space-y-4">
@@ -153,7 +153,7 @@ function Visas() {
                     <div className="bg-accent/10 p-3 text-accent">
                       <Users className="w-6 h-6" />
                     </div>
-                    <span className="font-serif text-xs text-brand/60 tracking-wider">02 / Entry Policies</span>
+                    <span className="font-serif text-xs text-brand/100 tracking-wider">02 / Entry Policies</span>
                   </div>
                   <h3 className="font-serif text-2xl mb-4 text-brand">General Rules</h3>
                   <ul className="text-sm font-light text-brand/85 space-y-4">
@@ -180,7 +180,7 @@ function Visas() {
                     <div className="bg-accent/10 p-3 text-accent">
                       <Eye className="w-6 h-6" />
                     </div>
-                    <span className="font-serif text-xs text-brand/60 tracking-wider">03 / Border Security</span>
+                    <span className="font-serif text-xs text-brand/100 tracking-wider">03 / Border Security</span>
                   </div>
                   <h3 className="font-serif text-2xl mb-4 text-brand">Immigration Procedures</h3>
                   <ul className="text-sm font-light text-brand/85 space-y-4">
@@ -207,7 +207,7 @@ function Visas() {
                     <div className="bg-accent/10 p-3 text-accent">
                       <BadgeAlert className="w-6 h-6" />
                     </div>
-                    <span className="font-serif text-xs text-brand/60 tracking-wider">04 / Guarantor Rules</span>
+                    <span className="font-serif text-xs text-brand/100 tracking-wider">04 / Guarantor Rules</span>
                   </div>
                   <h3 className="font-serif text-2xl mb-4 text-brand">UAE Guarantor & ID</h3>
                   <p className="text-xs font-light text-brand/85 mb-4">
@@ -241,7 +241,7 @@ function Visas() {
                     <div className="bg-accent/10 p-3 text-accent">
                       <Info className="w-6 h-6" />
                     </div>
-                    <span className="font-serif text-xs text-brand/60 tracking-wider">05 / Terms & Conditions</span>
+                    <span className="font-serif text-xs text-brand/100 tracking-wider">05 / Terms & Conditions</span>
                   </div>
                   <h3 className="font-serif text-2xl mb-4 text-brand">Terms & Conditions</h3>
                   <div className="grid md:grid-cols-2 gap-6 text-sm font-light text-brand/85">
@@ -286,7 +286,7 @@ function Visas() {
                   Popular Global <br /><span className="italic">Visa Services</span>
                 </h2>
               </div>
-              <p className="text-brand/60 text-sm max-w-xs font-light">
+              <p className="text-brand/100 text-sm max-w-xs font-light">
                 Secure your tourist or visitor visa with our rapid concierge processing and unmatched document coordination.
               </p>
             </div>            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
