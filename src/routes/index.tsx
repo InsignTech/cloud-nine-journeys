@@ -148,7 +148,7 @@ function Index() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
               {[...homeData.popularVisas] // create copy to avoid mutating original
     .sort(() => Math.random() - 0.5)
     .slice(0, 4)
@@ -177,39 +177,39 @@ function Index() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                       
                       {/* Overlay capsule - Displays processing timeline */}
-                      <div className="absolute bottom-4 left-4 bg-white px-3.5 py-1.5 rounded-xl flex flex-col shadow-sm">
-                        <span className="text-[8px] font-sans tracking-widest text-gray-400 font-bold uppercase leading-none mb-0.5">
+                      <div className="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 bg-white px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl flex flex-col shadow-sm">
+                        <span className="text-[7px] sm:text-[8px] font-sans tracking-widest text-gray-400 font-bold uppercase leading-none mb-0.5">
                           {v.badge || "FAST TRACK"}
                         </span>
-                        <span className="text-[10px] font-sans text-sky-600 font-bold leading-none">
+                        <span className="text-[9px] sm:text-[10px] font-sans text-sky-600 font-bold leading-none">
                           {v.processingTime}
                         </span>
                       </div>
                     </div>
 
                     {/* Card Body */}
-                    <div className="p-6 flex flex-col flex-grow justify-between">
+                    <div className="p-4 sm:p-6 flex flex-col flex-grow justify-between">
                       <div>
-                        <div className="flex items-start justify-between gap-2 mb-2">
-                          <h3 className="font-sans text-base font-bold text-gray-900 tracking-tight leading-tight group-hover:text-accent transition-colors">
+                        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1.5 sm:gap-2 mb-2">
+                          <h3 className="font-sans text-sm sm:text-base font-bold text-gray-900 tracking-tight leading-tight group-hover:text-accent transition-colors">
                             {displayHeading}
                           </h3>
-                          <span className="bg-sky-50 text-sky-500 text-[9px] font-sans font-bold tracking-wider px-2 py-0.5 rounded-md shrink-0">
+                          <span className="bg-sky-50 text-sky-500 text-[8px] sm:text-[9px] font-sans font-bold tracking-wider px-1.5 py-0.5 rounded-md self-start shrink-0">
                             VISA
                           </span>
                         </div>
                         
                         {/* Timeline bullet - Get in [processingTime] */}
-                        <div className="flex items-center gap-1.5 text-xs text-gray-500 font-light mt-2.5">
+                        <div className="flex items-center gap-1.5 text-[10px] sm:text-xs text-gray-500 font-light mt-2 sm:mt-2.5">
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
                           <span>Get in {v.processingTime}</span>
                         </div>
                       </div>
 
                       {/* Bottom Price: starting price tag */}
-                      <div className="flex items-baseline gap-2 mt-2 pt-4 border-t border-gray-100/60">
-                        <span className="text-xl font-bold text-gray-900 font-sans">{v.price}</span>
-                        <span className="text-[9px] font-sans tracking-widest text-gray-400 font-bold uppercase">
+                      <div className="flex flex-wrap items-baseline gap-1 sm:gap-2 mt-4 sm:mt-5 pt-3 sm:pt-4 border-t border-gray-100/60">
+                        <span className="text-base sm:text-xl font-bold text-gray-900 font-sans">{v.price}</span>
+                        <span className="text-[8px] sm:text-[9px] font-sans tracking-widest text-gray-400 font-bold uppercase">
                           STARTING PRICE
                         </span>
                       </div>
