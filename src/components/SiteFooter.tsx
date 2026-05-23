@@ -44,19 +44,23 @@ export function SiteFooter() {
         </div>
         <div>
           <h5 className="eyebrow mb-6">Connect</h5>
-          <p className="text-sm text-brand/70 mb-4 font-light">
-            Join our journal for exclusive travel insights.
-          </p>
-          <form className="flex border-b border-brand/30 pb-2">
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="bg-transparent text-sm w-full outline-none py-1 font-light"
-            />
-            <button className="text-accent uppercase text-[10px] font-bold tracking-widest">
-              Submit
-            </button>
-          </form>
+          <ul className="text-sm space-y-4 text-brand/70 font-light">
+            <li>
+              <a href="tel:+971504190737" className="hover:text-accent flex items-center gap-2">
+                <span>+971 50 419 0737</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+971586490737" className="hover:text-accent flex items-center gap-2">
+                <span>+971 58 649 0737</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@cloudlifetravels.com" className="hover:text-accent flex items-center gap-2">
+                <span>hello@cloudlifetravels.com</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-4 justify-between items-center pt-8 border-t border-brand/5 max-w-7xl mx-auto">
@@ -65,6 +69,9 @@ export function SiteFooter() {
         </span>
         <span className="text-[10px] uppercase tracking-widest text-brand/40 italic font-serif">
           Designed for the Exceptional
+        </span>
+        <span className="text-[10px] uppercase tracking-widest text-brand/40">
+          Built by <a href="https://insigntechsolutions.com/" target="_blank" rel="noopener noreferrer" className="hover:text-accent lowercase">insign tech solutions</a>
         </span>
       </div>
     </footer>
