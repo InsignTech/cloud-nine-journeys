@@ -10,7 +10,7 @@ import multipleEntryVisa from "@/assets/multiple-entry-visa.png";
 import airportVisaChange from "@/assets/airport-visa-change.png";
 import borderVisaChange from "@/assets/border-visa-change.png";
 
-import homeData from "@/data/gokite-data.json";
+import homeData from "@/data/cloudlife-data.json";
 
 
 import { 

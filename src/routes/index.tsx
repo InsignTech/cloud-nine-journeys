@@ -11,7 +11,7 @@ import maldives from "@/assets/maldives.jpg";
 import alps from "@/assets/alps.jpg";
 
 // Import Go Kite static data
-import homeData from "@/data/gokite-data.json";
+import homeData from "@/data/cloudlife-data.json";
 
 // Import Lucide icons for premium detail
 import { ArrowRight, ShieldCheck, Plane, Globe } from "lucide-react";
@@ -261,16 +261,19 @@ function Index() {
               <div className="max-w-2xl">
                 <span className="eyebrow text-accent block mb-5">Trending Escapes</span>
                 <h2 className="font-serif text-5xl md:text-6xl mb-6 leading-[0.95]">
-                  Curated International <br /><span className="italic opacity-70 font-light">Holiday Packages</span>
+                  Holiday Packages <br />
                 </h2>
               </div>
-              <p className="text-white/60 text-sm max-w-xs font-light">
+              {/* <p className="text-white/60 text-sm max-w-xs font-light">
                 Handpicked global journeys combining luxury flights, bespoke tours, and boutique lodging.
-              </p>
+              </p> */}
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {homeData.trendingHolidays.map((h) => (
+              {[...homeData.trendingHolidays] // create copy to avoid mutating original
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 4)
+    .map((h) => (
                 <article
                   key={h.id}
                   className="group flex flex-col md:flex-row bg-white/5 border border-white/10 rounded-sm overflow-hidden transition-all duration-300 hover:border-accent/40"
