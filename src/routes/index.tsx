@@ -280,7 +280,7 @@ function Index() {
                 >
                   <div className="relative md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
                     <img
-                      src={holidayPlaceholderImages[h.id] || santorini}
+                      src={`/src/assets/${h.imageName}`}
                       alt={h.title}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"

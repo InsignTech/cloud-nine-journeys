@@ -17,7 +17,7 @@
       "duration": "5 Nights / 6 Days",
       "price": "AED 1,899",
       "inclusions": ["Flights Included", "Luxury Resort Stay", "Private Tour Guide", "Spa & Beach Dining"],
-      "imageName": "bali.png",
+      "imageName": "bali.jpg",
       "tag": "Romantic / Island Paradise"
     },
     {
@@ -27,7 +27,7 @@
       "duration": "5 Nights / 6 Days",
       "price": "AED 2,999",
       "inclusions": ["Flights Included", "Premium Hotels", "Inter-city Transfers", "Sentosa Island Entry"],
-      "imageName": "singapore.png",
+      "imageName": "singapore-image.jpg",
       "tag": "City Break / Futuristic"
     },
     {
@@ -37,7 +37,7 @@
       "duration": "6 Nights / 7 Days",
       "price": "AED 4,999",
       "inclusions": ["Flights Included", "4★ Swiss & Paris Hotels", "Eurail Travel Pass", "Seine River Cruise"],
-      "imageName": "swiss.png",
+      "imageName": "paris2.png",
       "tag": "Luxury / Europe Highlights"
     }
   ],
