@@ -1,0 +1,134 @@
+{
+  "trendingHolidays": [
+    {
+      "id": "georgia-summer",
+      "title": "Georgia Summer Escape",
+      "destination": "Tbilisi & Kazbegi, Georgia",
+      "duration": "4 Nights / 5 Days",
+      "price": "AED 1,499",
+      "inclusions": ["Flights Included", "4★ Boutique Hotel", "Private Airport Transfers", "Daily Sightseeing Tours"],
+      "imageName": "georgia.webp",
+      "tag": "Trending / Alpine Meadows"
+    },
+    {
+      "id": "bali-retreat",
+      "title": "Bali Tropical Serenity",
+      "destination": "Ubud & Kuta, Indonesia",
+      "duration": "5 Nights / 6 Days",
+      "price": "AED 1,899",
+      "inclusions": ["Flights Included", "Luxury Resort Stay", "Private Tour Guide", "Spa & Beach Dining"],
+      "imageName": "bali.png",
+      "tag": "Romantic / Island Paradise"
+    },
+    {
+      "id": "singapore-malaysia",
+      "title": "Singapore & Malaysia Getaway",
+      "destination": "Singapore & Kuala Lumpur",
+      "duration": "5 Nights / 6 Days",
+      "price": "AED 2,999",
+      "inclusions": ["Flights Included", "Premium Hotels", "Inter-city Transfers", "Sentosa Island Entry"],
+      "imageName": "singapore.png",
+      "tag": "City Break / Futuristic"
+    },
+    {
+      "id": "swiss-paris",
+      "title": "Swiss Alps & Paris Classic",
+      "destination": "Zurich, Interlaken & Paris",
+      "duration": "6 Nights / 7 Days",
+      "price": "AED 4,999",
+      "inclusions": ["Flights Included", "4★ Swiss & Paris Hotels", "Eurail Travel Pass", "Seine River Cruise"],
+      "imageName": "swiss.png",
+      "tag": "Luxury / Europe Highlights"
+    }
+  ],
+  "popularVisas": [
+    {
+      "id": "schengen-visa",
+      "country": "Schengen Visa",
+      "region": "Europe (France, Italy, Germany)",
+      "price": "AED 299",
+      "processingTime": "15-20 Days",
+      "visaType": "Tourist Short Stay",
+      "countryCode": "EU",
+      "badge": "High Demand",
+      "image": "europe.png"
+    },
+    {
+      "id": "uk-visa",
+      "country": "United Kingdom",
+      "region": "England, Scotland & Wales",
+      "price": "AED 390",
+      "processingTime": "10-15 Days",
+      "visaType": "Standard Visitor Visa",
+      "countryCode": "GB",
+      "badge": "Popular",
+      "image": "uk.webp"
+    },
+    {
+      "id": "us-visa",
+      "country": "United States",
+      "region": "B1/B2 Tourist & Business",
+      "price": "AED 590",
+      "processingTime": "15-30 Days",
+      "visaType": "Non-Immigrant Visitor",
+      "countryCode": "US",
+      "badge": "High Success",
+      "image": "us.png"
+    },
+    {
+      "id": "japan-visa",
+      "country": "Japan",
+      "region": "Tokyo, Kyoto & Osaka",
+      "price": "AED 250",
+      "processingTime": "4-7 Days",
+      "visaType": "Tourist Single Entry",
+      "countryCode": "JP",
+      "badge": "Trending",
+      "image": "japan.webp"
+    },
+    {
+      "id": "singapore-visa",
+      "country": "Singapore",
+      "region": "City-State Travel",
+      "price": "AED 150",
+      "processingTime": "3-5 Days",
+      "visaType": "E-Visa Short Entry",
+      "countryCode": "SG",
+      "badge": "Fast Process",
+      "image": "singapore.webp"
+    },
+    {
+      "id": "canada-visa",
+      "country": "Canada",
+      "region": "North America Visitor",
+      "price": "AED 490",
+      "processingTime": "20-30 Days",
+      "visaType": "Temporary Resident Visa",
+      "countryCode": "CA",
+      "badge": "Long-Term",
+      "image": "canada.svg"
+    },
+    {
+      "id": "turkey-visa",
+      "country": "Turkey",
+      "region": "Istanbul & Cappadocia",
+      "price": "AED 290",
+      "processingTime": "5-7 Days",
+      "visaType": "e-Visa / Sticker Visa",
+      "countryCode": "TR",
+      "badge": "Top Choice",
+      "image": "turkey.svg"
+    },
+    {
+      "id": "saudi-umrah-visa",
+      "country": "Saudi Arabia (Umrah)",
+      "region": "Makkah & Madinah Pilgrimage",
+      "price": "AED 350",
+      "processingTime": "2-3 Days",
+      "visaType": "Umrah Tourist Visa",
+      "countryCode": "SA",
+      "badge": "Instant e-Visa",
+      "image": "saudi.svg"
+    }
+  ]
+}

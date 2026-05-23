@@ -10,6 +10,12 @@ import santorini from "@/assets/santorini.jpg";
 import maldives from "@/assets/maldives.jpg";
 import alps from "@/assets/alps.jpg";
 
+// Import Go Kite static data
+import homeData from "@/data/gokite-data.json";
+
+// Import Lucide icons for premium detail
+import { ArrowRight, ShieldCheck, Plane, Globe } from "lucide-react";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -21,6 +27,14 @@ export const Route = createFileRoute("/")({
   }),
   component: Index,
 });
+
+// Mapping for placeholder images
+const holidayPlaceholderImages: Record<string, string> = {
+  "georgia-summer": santorini,
+  "bali-retreat": maldives,
+  "singapore-malaysia": skyline,
+  "swiss-paris": alps,
+};
 
 const activities = [
   { title: "Celestial Desert Safaris", tag: "Activities / Private Tour", img: desertDawn, alt: "Hot air balloons over Arabian dunes at dawn" },
@@ -119,6 +133,100 @@ function Index() {
           </div>
         </section>
 
+        {/* NEW: Popular Global Visas Section - Matches Go Kite Flag Design */}
+        <section className="bg-canvas py-32 px-6 md:px-10 border-b border-brand/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-8">
+              <div className="max-w-2xl">
+                <span className="eyebrow text-accent block mb-5">Global Entry</span>
+                <h2 className="font-serif text-5xl md:text-7xl leading-[0.95]">
+                  Popular Global <br /><span className="italic">Visa Services</span>
+                </h2>
+              </div>
+              <p className="text-brand/60 text-sm max-w-xs font-light">
+                Secure your tourist or visitor visa with our rapid concierge processing and unmatched document coordination.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {homeData.popularVisas.map((v) => {
+                // Ensure all headings follow standard "[Country] Visa From Dubai"
+                let cleanCountry = v.country;
+                if (cleanCountry.toLowerCase().endsWith("visa")) {
+                  cleanCountry = cleanCountry.substring(0, cleanCountry.toLowerCase().lastIndexOf("visa")).trim();
+                }
+                const displayHeading = `${cleanCountry} Visa From Dubai`;
+
+                return (
+                  <Link
+                    to="/contact"
+                    key={v.id}
+                    className="group flex flex-col bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1"
+                  >
+                    {/* Top flag image with overlay gradient and capsule badge */}
+                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-50 border-b border-gray-100">
+                      <img
+                        src={`https://flagcdn.com/w640/${v.countryCode.toLowerCase()}.png`}
+                        alt={`${v.country} flag`}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                      
+                      {/* Overlay capsule - Displays processing timeline */}
+                      <div className="absolute bottom-4 left-4 bg-white px-3.5 py-1.5 rounded-xl flex flex-col shadow-sm">
+                        <span className="text-[8px] font-sans tracking-widest text-gray-400 font-bold uppercase leading-none mb-0.5">
+                          {v.badge || "FAST TRACK"}
+                        </span>
+                        <span className="text-[10px] font-sans text-sky-600 font-bold leading-none">
+                          {v.processingTime}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Card Body */}
+                    <div className="p-6 flex flex-col flex-grow justify-between">
+                      <div>
+                        <div className="flex items-start justify-between gap-2 mb-2">
+                          <h3 className="font-sans text-base font-bold text-gray-900 tracking-tight leading-tight group-hover:text-accent transition-colors">
+                            {displayHeading}
+                          </h3>
+                          <span className="bg-sky-50 text-sky-500 text-[9px] font-sans font-bold tracking-wider px-2 py-0.5 rounded-md shrink-0">
+                            VISA
+                          </span>
+                        </div>
+                        
+                        {/* Timeline bullet - Get in [processingTime] */}
+                        <div className="flex items-center gap-1.5 text-xs text-gray-500 font-light mt-2.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+                          <span>Get in {v.processingTime}</span>
+                        </div>
+                      </div>
+
+                      {/* Bottom Price: starting price tag */}
+                      <div className="flex items-baseline gap-2 mt-2 pt-4 border-t border-gray-100/60">
+                        <span className="text-xl font-bold text-gray-900 font-sans">{v.price}</span>
+                        <span className="text-[9px] font-sans tracking-widest text-gray-400 font-bold uppercase">
+                          STARTING PRICE
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+            
+            <div className="mt-16 text-center">
+              <Link
+                to="/visas"
+                className="inline-flex items-center gap-2 eyebrow text-brand/60 hover:text-accent border-b border-brand/10 pb-1 hover:border-accent transition-colors"
+              >
+                View all supported destinations & requirements <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="py-32 px-6 md:px-10">
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-end mb-16 gap-8">
@@ -139,6 +247,88 @@ function Index() {
                   </div>
                 </Link>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* NEW: Trending Holidays Section */}
+        <section className="bg-brand text-white py-32 px-6 md:px-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-8">
+              <div className="max-w-2xl">
+                <span className="eyebrow text-accent block mb-5">Trending Escapes</span>
+                <h2 className="font-serif text-5xl md:text-6xl mb-6 leading-[0.95]">
+                  Curated International <br /><span className="italic opacity-70 font-light">Holiday Packages</span>
+                </h2>
+              </div>
+              <p className="text-white/60 text-sm max-w-xs font-light">
+                Handpicked global journeys combining luxury flights, bespoke tours, and boutique lodging.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {homeData.trendingHolidays.map((h) => (
+                <article
+                  key={h.id}
+                  className="group flex flex-col md:flex-row bg-white/5 border border-white/10 rounded-sm overflow-hidden transition-all duration-300 hover:border-accent/40"
+                >
+                  <div className="relative md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
+                    <img
+                      src={holidayPlaceholderImages[h.id] || santorini}
+                      alt={h.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute top-4 left-4 bg-accent text-brand text-[9px] uppercase tracking-widest font-bold px-3 py-1 rounded-sm">
+                      {h.tag}
+                    </div>
+                  </div>
+                  
+                  <div className="md:w-1/2 p-8 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center gap-1.5 text-accent eyebrow mb-3 text-[10px]">
+                        <Plane className="w-3.5 h-3.5" />
+                        <span>{h.destination}</span>
+                      </div>
+                      <h3 className="font-serif text-2xl italic mb-3 leading-tight text-white">{h.title}</h3>
+                      <p className="text-white/40 text-[11px] tracking-widest uppercase font-sans font-light mb-6">
+                        {h.duration}
+                      </p>
+
+                      <div className="space-y-2 mb-8">
+                        {h.inclusions.map((inc, i) => (
+                          <div key={i} className="flex items-center gap-2 text-[12px] text-white/70 font-sans font-light">
+                            <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0" />
+                            <span>{inc}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="border-t border-white/10 pt-6 flex justify-between items-center mt-auto">
+                      <div>
+                        <div className="text-[9px] eyebrow text-white/40 mb-1">Starting From</div>
+                        <div className="font-serif text-2xl italic text-accent">{h.price}</div>
+                      </div>
+                      <Link
+                        to="/contact"
+                        className="bg-accent text-brand px-6 py-3.5 text-[9px] uppercase tracking-wider font-bold hover:bg-white hover:text-brand transition-colors"
+                      >
+                        Enquire
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-16 text-center">
+              <Link
+                to="/tour-packages"
+                className="inline-flex items-center gap-2 eyebrow text-accent border-b border-accent/20 pb-1 hover:border-accent transition-colors"
+              >
+                Explore all curated tour itineraries <Globe className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </div>
         </section>
