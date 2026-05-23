@@ -1,15 +1,23 @@
 import { Link } from "@tanstack/react-router";
+import logo from "@/assets/logo.png";
 
 export function SiteFooter() {
   return (
     <footer className="pt-32 pb-12 px-6 md:px-10 border-t border-brand/10 bg-canvas">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20 max-w-7xl mx-auto">
         <div>
-          <div className="flex flex-col leading-none mb-6">
-            <span className="font-serif italic text-3xl">Cloud Life</span>
-            <span className="text-[10px] tracking-[0.4em] uppercase opacity-40 mt-1">
-              Travel &amp; Beyond
-            </span>
+          <div className="flex items-center gap-3 mb-6">
+            <img
+              src={logo}
+              alt="Cloud Life Travels Logo"
+              className="h-12 w-12 object-contain"
+            />
+            <div className="flex flex-col leading-none">
+              <span className="font-serif italic text-2xl">Cloud Life</span>
+              <span className="text-[9px] tracking-[0.35em] uppercase opacity-50 mt-0.5">
+                Travel &amp; Beyond
+              </span>
+            </div>
           </div>
           <p className="text-xs text-brand/60 leading-relaxed max-w-xs">
             Defining the pinnacle of travel experiences in the UAE and beyond.

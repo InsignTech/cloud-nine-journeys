@@ -65,7 +65,7 @@ function Index() {
             </h1>
             <div className="flex flex-col md:flex-row gap-10 items-start reveal reveal-delay-2">
               <p className="text-white/85 max-w-md text-base leading-relaxed font-light">
-                Transcending ordinary tourism. We craft bespoke Middle Eastern experiences for the discerning global traveler — from seamless visa logistics to private desert sanctuaries.
+                Transcending ordinary tourism. We craft bespoke Middle Eastern experiences for the discerning global traveler from seamless visa logistics to private desert sanctuaries.
               </p>
               <Link to="/contact" className="bg-accent text-brand px-10 py-5 text-[10px] uppercase tracking-[0.25em] font-bold hover:brightness-110 transition-all whitespace-nowrap">
                 Plan Your Journey
@@ -134,7 +134,7 @@ function Index() {
         </section>
 
         {/* NEW: Popular Global Visas Section - Matches Go Kite Flag Design */}
-        <section className="bg-canvas py-32 px-6 md:px-10 border-b border-brand/5">
+        <section className="bg-canvas py-25 px-6 md:px-10 border-b border-brand/5">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-8">
               <div className="max-w-2xl">
@@ -230,7 +230,7 @@ function Index() {
           </div>
         </section>
 
-        <section className="py-32 px-6 md:px-10">
+        <section className="py-25 px-6 md:px-10">
           <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-end mb-16 gap-8">
               <div>

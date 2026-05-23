@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import logo from "@/assets/logo.png";
 
 const links = [
   { to: "/about", label: "About" },
@@ -31,11 +32,20 @@ export function SiteNav({ overlay = false }: { overlay?: boolean }) {
       }`}
     >
       <div className="px-6 md:px-10 flex justify-between items-center">
-        <Link to="/" className="flex flex-col leading-none">
-          <span className="font-serif italic text-2xl md:text-3xl">Cloud Life</span>
-          <span className="text-[9px] tracking-[0.4em] uppercase opacity-70 mt-1">
-            Travel &amp; Beyond
-          </span>
+        <Link to="/" className="flex items-center gap-3 group">
+          <img
+            src={logo}
+            alt="Cloud Life Travels Logo"
+            className={`h-10 w-10 md:h-12 md:w-12 object-contain transition-all duration-300 ${
+              solid ? "" : "brightness-0 invert"
+            }`}
+          />
+          <div className="flex flex-col leading-none">
+            <span className="font-serif italic text-xl md:text-2xl">Cloud Life</span>
+            <span className="text-[8px] tracking-[0.35em] uppercase opacity-70 mt-0.5">
+              Travel &amp; Beyond
+            </span>
+          </div>
         </Link>
         <div className="hidden lg:flex gap-9 items-center text-[11px] uppercase tracking-[0.18em] font-medium">
           {links.map((l) => (
