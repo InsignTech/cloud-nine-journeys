@@ -9,8 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VisasRouteImport } from './routes/visas'
+import { Route as TourPackagesRouteImport } from './routes/tour-packages'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as OtherServicesRouteImport } from './routes/other-services'
+import { Route as DubaiActivitiesRouteImport } from './routes/dubai-activities'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VisasRoute = VisasRouteImport.update({
+  id: '/visas',
+  path: '/visas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TourPackagesRoute = TourPackagesRouteImport.update({
+  id: '/tour-packages',
+  path: '/tour-packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OtherServicesRoute = OtherServicesRouteImport.update({
+  id: '/other-services',
+  path: '/other-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DubaiActivitiesRoute = DubaiActivitiesRouteImport.update({
+  id: '/dubai-activities',
+  path: '/dubai-activities',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +61,130 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/dubai-activities': typeof DubaiActivitiesRoute
+  '/other-services': typeof OtherServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/tour-packages': typeof TourPackagesRoute
+  '/visas': typeof VisasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/dubai-activities': typeof DubaiActivitiesRoute
+  '/other-services': typeof OtherServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/tour-packages': typeof TourPackagesRoute
+  '/visas': typeof VisasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/dubai-activities': typeof DubaiActivitiesRoute
+  '/other-services': typeof OtherServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/tour-packages': typeof TourPackagesRoute
+  '/visas': typeof VisasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/dubai-activities'
+    | '/other-services'
+    | '/sitemap.xml'
+    | '/tour-packages'
+    | '/visas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/dubai-activities'
+    | '/other-services'
+    | '/sitemap.xml'
+    | '/tour-packages'
+    | '/visas'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/dubai-activities'
+    | '/other-services'
+    | '/sitemap.xml'
+    | '/tour-packages'
+    | '/visas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  DubaiActivitiesRoute: typeof DubaiActivitiesRoute
+  OtherServicesRoute: typeof OtherServicesRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TourPackagesRoute: typeof TourPackagesRoute
+  VisasRoute: typeof VisasRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/visas': {
+      id: '/visas'
+      path: '/visas'
+      fullPath: '/visas'
+      preLoaderRoute: typeof VisasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tour-packages': {
+      id: '/tour-packages'
+      path: '/tour-packages'
+      fullPath: '/tour-packages'
+      preLoaderRoute: typeof TourPackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/other-services': {
+      id: '/other-services'
+      path: '/other-services'
+      fullPath: '/other-services'
+      preLoaderRoute: typeof OtherServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dubai-activities': {
+      id: '/dubai-activities'
+      path: '/dubai-activities'
+      fullPath: '/dubai-activities'
+      preLoaderRoute: typeof DubaiActivitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +197,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  DubaiActivitiesRoute: DubaiActivitiesRoute,
+  OtherServicesRoute: OtherServicesRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TourPackagesRoute: TourPackagesRoute,
+  VisasRoute: VisasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
