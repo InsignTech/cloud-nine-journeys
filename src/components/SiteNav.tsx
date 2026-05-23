@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import logo from "@/assets/logo.png";
 
 const links = [
+  { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/visas", label: "Visas" },
   { to: "/dubai-activities", label: "Dubai Activities" },
