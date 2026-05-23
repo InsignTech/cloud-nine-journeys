@@ -2,8 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageHero } from "@/components/PageHero";
-import yacht from "@/assets/yacht.jpg";
-
+import georgia from "@/assets/georgia.webp";
 export const Route = createFileRoute("/other-services")({
   head: () => ({
     meta: [
@@ -36,8 +35,8 @@ function OtherServices() {
           eyebrow="The Full Atelier"
           title={<>Everything else, <br /><span className="not-italic">handled.</span></>}
           subtitle="From a last-minute jet to a milestone celebration in Capri — our concierge desk answers within the hour."
-          image={yacht}
-          alt="Luxury yacht deck"
+          image={georgia}
+          alt="Georgia landscape"
         />
 
         <section className="py-32 px-6 md:px-10">

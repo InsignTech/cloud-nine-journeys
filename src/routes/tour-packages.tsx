@@ -6,6 +6,7 @@ import santorini from "@/assets/santorini.jpg";
 import maldives from "@/assets/maldives.jpg";
 import alps from "@/assets/alps.jpg";
 import desert from "@/assets/desert-dawn.jpg";
+import bali from "@/assets/bali.jpg";
 import { Globe, Plane, ShieldCheck } from "lucide-react";
 import homeData from "@/data/cloudlife-data.json";
 
@@ -37,7 +38,7 @@ function TourPackages() {
           eyebrow="Curated Journeys"
           title={<>The world, <br /><span className="not-italic">unfolded.</span></>}
           subtitle="Multi-day journeys designed by hand. Each package is a starting point — every detail is yours to shape."
-          image={maldives}
+          image={bali}
           alt="Santorini at sunset"
         />
 
