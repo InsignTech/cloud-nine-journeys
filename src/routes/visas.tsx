@@ -33,7 +33,7 @@ function Visas() {
         <PageHero
           eyebrow="Global Mobility"
           title={<>The art of <br /><span className="not-italic">arriving.</span></>}
-          subtitle="Bureaucracy, dissolved. Our visa team handles documentation, submission and follow-up so you can focus on the journey ahead."
+          subtitle="Planning to bring your family and friends to the UAE for a holiday? You can now easily apply for UAE tourist and multiple visas online with us. "
           image={passport}
           alt="Luxury passport holder"
         />
