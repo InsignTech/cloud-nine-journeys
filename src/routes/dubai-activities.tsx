@@ -3,9 +3,11 @@ import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageHero } from "@/components/PageHero";
 import desert from "@/assets/desert-dawn.jpg";
+import falcon from "@/assets/falcon1.png";
 import skyline from "@/assets/skyline-gastronomy.jpg";
 import yacht from "@/assets/yacht.jpg";
 import marina from "@/assets/hero-marina.jpg";
+import chopper from "@/assets/chopper.jpeg";
 
 export const Route = createFileRoute("/dubai-activities")({
   head: () => ({
@@ -24,8 +26,8 @@ const items = [
   { title: "Skyline Gastronomy", tag: "Evening / Reservation", price: "From AED 1,800", img: skyline, alt: "Dubai skyline at dusk" },
   { title: "Private Marina Voyage", tag: "Half/Full Day Charter", price: "From AED 8,500", img: yacht, alt: "Yacht deck" },
   { title: "Architectural Walks", tag: "Half-day / Curated", price: "From AED 1,200", img: marina, alt: "Dubai Marina from above" },
-  { title: "Falconry & Heritage", tag: "Cultural Immersion", price: "From AED 1,600", img: desert, alt: "Desert heritage" },
-  { title: "Helicopter Skyline Tour", tag: "30 min / Private", price: "From AED 4,200", img: skyline, alt: "Skyline aerial" },
+  { title: "Falconry & Heritage", tag: "Cultural Immersion", price: "From AED 1,600", img: falcon, alt: "Falconry experience" },
+  { title: "Helicopter Skyline Tour", tag: "30 min / Private", price: "From AED 4,200", img: chopper, alt: "Helicopter tour" },
 ];
 
 function DubaiActivities() {
