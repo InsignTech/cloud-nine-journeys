@@ -15,11 +15,17 @@ export function PageHero({ eyebrow, title, subtitle, image, alt }: PageHeroProps
           alt={alt}
           className="w-full h-full object-cover kenburns"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand/80 via-brand/20 to-brand/30" />
+        {/* Strong bottom-up dark gradient to protect text */}
+        <div className="absolute inset-0 bg-gradient-to-t from-brand/95 via-brand/50 to-brand/20" />
+        {/* Left-side vignette so text area is always dark enough */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand/70 via-brand/10 to-transparent" />
       </div>
       <div className="relative z-10 max-w-5xl reveal">
-        <span className="eyebrow text-accent block mb-6">{eyebrow}</span>
-        <h1 className="font-serif text-[clamp(3rem,8vw,6.5rem)] leading-[0.9] text-white italic">
+        <span className="eyebrow text-white/70 block mb-6 tracking-[0.25em]">{eyebrow}</span>
+        <h1
+          className="font-serif text-[clamp(3rem,8vw,6.5rem)] leading-[0.9] text-white italic"
+          style={{ textShadow: "0 2px 20px rgba(0,0,0,0.55)" }}
+        >
           {title}
         </h1>
         {subtitle && (

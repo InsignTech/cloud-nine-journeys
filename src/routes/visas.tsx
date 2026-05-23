@@ -43,7 +43,7 @@ function Visas() {
       <main className="bg-canvas text-brand">
         <PageHero
           eyebrow="Global Mobility"
-          title={<>The art of <br /><span className="not-italic text-accent">arriving.</span></>}
+          title={<>Explore beyond <br /><span className="not-italic text-accent">borders.</span></>}
           subtitle="Planning to bring your family and friends to the UAE for a holiday? You can now easily apply for UAE tourist and multiple visas online with us."
           image={passport}
           alt="Premium passport cover and travel documents"
@@ -118,45 +118,45 @@ function Visas() {
             <div className="text-center mb-20">
               <span className="eyebrow text-accent block mb-3">Important Guidelines</span>
               <h2 className="font-serif text-3xl md:text-5xl">All You Need To Know Before Applying</h2>
-              <p className="text-brand/55 font-light text-sm mt-3">Please carefully review the required documentation and procedures below.</p>
+              <p className="text-brand/80 font-light text-sm mt-3 max-w-xl mx-auto">Please carefully review the required documentation and procedures below.</p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               
               {/* Card 1: Visitor's Documents */}
-              <div className="bg-canvas border border-brand/5 p-8 rounded-none transition-all hover:border-accent/30 flex flex-col justify-between">
+              <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
                     <div className="bg-accent/10 p-3 text-accent">
                       <FileText className="w-6 h-6" />
                     </div>
-                    <span className="font-serif text-xs text-brand/30">01 / Required Files</span>
+                    <span className="font-serif text-xs text-brand/60 tracking-wider">01 / Required Files</span>
                   </div>
-                  <h3 className="font-serif text-xl mb-4 text-brand">Visitor's Documents</h3>
-                  <ul className="text-sm font-light text-brand/70 space-y-4">
+                  <h3 className="font-serif text-2xl mb-4 text-brand">Visitor's Documents</h3>
+                  <ul className="text-sm font-light text-brand/85 space-y-4">
                     <li className="flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
-                      <span><strong>Passport Copy:</strong> Must have at least 6 months validity from the planned date of entry in the UAE.</span>
+                      <span><strong className="font-medium text-brand">Passport Copy:</strong> Must have at least 6 months validity from the planned date of entry in the UAE.</span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
-                      <span><strong>Photograph:</strong> Passport size photo taken against a clear white background.</span>
+                      <span><strong className="font-medium text-brand">Photograph:</strong> Passport size photo taken against a clear white background.</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
               {/* Card 2: General Rules */}
-              <div className="bg-canvas border border-brand/5 p-8 rounded-none transition-all hover:border-accent/30 flex flex-col justify-between">
+              <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
                     <div className="bg-accent/10 p-3 text-accent">
                       <Users className="w-6 h-6" />
                     </div>
-                    <span className="font-serif text-xs text-brand/30">02 / Entry Policies</span>
+                    <span className="font-serif text-xs text-brand/60 tracking-wider">02 / Entry Policies</span>
                   </div>
-                  <h3 className="font-serif text-xl mb-4 text-brand">General Rules</h3>
-                  <ul className="text-sm font-light text-brand/70 space-y-4">
+                  <h3 className="font-serif text-2xl mb-4 text-brand">General Rules</h3>
+                  <ul className="text-sm font-light text-brand/85 space-y-4">
                     <li className="flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
                       <span>Children traveling with family require a valid birth certificate copy.</span>
@@ -174,16 +174,16 @@ function Visas() {
               </div>
 
               {/* Card 3: Dubai Immigration Procedures */}
-              <div className="bg-canvas border border-brand/5 p-8 rounded-none transition-all hover:border-accent/30 flex flex-col justify-between">
+              <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
                     <div className="bg-accent/10 p-3 text-accent">
                       <Eye className="w-6 h-6" />
                     </div>
-                    <span className="font-serif text-xs text-brand/30">03 / Border Security</span>
+                    <span className="font-serif text-xs text-brand/60 tracking-wider">03 / Border Security</span>
                   </div>
-                  <h3 className="font-serif text-xl mb-4 text-brand">Immigration Procedures</h3>
-                  <ul className="text-sm font-light text-brand/70 space-y-4">
+                  <h3 className="font-serif text-2xl mb-4 text-brand">Immigration Procedures</h3>
+                  <ul className="text-sm font-light text-brand/85 space-y-4">
                     <li className="flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
                       <span>Dubai Airport Authorities conduct random eye screening for incoming visitors.</span>
@@ -194,57 +194,57 @@ function Visas() {
                     </li>
                     <li className="flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
-                      <span>If you fail to bring a copy, a charge of <strong>AED 30</strong> per copy applies (payable strictly in AED).</span>
+                      <span>If you fail to bring a copy, a charge of <strong className="font-medium text-brand">AED 30</strong> per copy applies (payable strictly in AED).</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
               {/* Card 4: UAE Guarantor (Country Specific) */}
-              <div className="bg-canvas border border-brand/5 p-8 rounded-none transition-all hover:border-accent/30 flex flex-col justify-between lg:col-span-1 lg:col-start-1">
+              <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between lg:col-span-1 lg:col-start-1">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
                     <div className="bg-accent/10 p-3 text-accent">
                       <BadgeAlert className="w-6 h-6" />
                     </div>
-                    <span className="font-serif text-xs text-brand/30">04 / Guarantor Rules</span>
+                    <span className="font-serif text-xs text-brand/60 tracking-wider">04 / Guarantor Rules</span>
                   </div>
-                  <h3 className="font-serif text-xl mb-4 text-brand">UAE Guarantor & ID</h3>
-                  <p className="text-xs font-light text-brand/60 mb-4">
+                  <h3 className="font-serif text-2xl mb-4 text-brand">UAE Guarantor & ID</h3>
+                  <p className="text-xs font-light text-brand/85 mb-4">
                     Additional identity documents are mandatory for visitors of the following nationalities:
                   </p>
-                  <ul className="text-sm font-light text-brand/70 space-y-3.5 pl-1">
+                  <ul className="text-sm font-light text-brand/85 space-y-3.5 pl-1">
                     <li className="flex items-center gap-3">
                       <span className="w-2 h-2 bg-accent/40" />
-                      <span><strong>Afghanistan:</strong> National identity card</span>
+                      <span><strong className="font-medium text-brand">Afghanistan:</strong> National identity card</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <span className="w-2 h-2 bg-accent/40" />
-                      <span><strong>Iran:</strong> National ID card (Kart Shinasaei Milli)</span>
+                      <span><strong className="font-medium text-brand">Iran:</strong> National ID card (Kart Shinasaei Milli)</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <span className="w-2 h-2 bg-accent/40" />
-                      <span><strong>Iraq:</strong> National identity card</span>
+                      <span><strong className="font-medium text-brand">Iraq:</strong> National identity card</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <span className="w-2 h-2 bg-accent/40" />
-                      <span><strong>Pakistan:</strong> National identity card</span>
+                      <span><strong className="font-medium text-brand">Pakistan:</strong> National identity card</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
               {/* Card 5: Terms & Conditions */}
-              <div className="bg-canvas border border-brand/5 p-8 rounded-none transition-all hover:border-accent/30 flex flex-col justify-between lg:col-span-2">
+              <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between lg:col-span-2">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
                     <div className="bg-accent/10 p-3 text-accent">
                       <Info className="w-6 h-6" />
                     </div>
-                    <span className="font-serif text-xs text-brand/30">05 / Terms & Conditions</span>
+                    <span className="font-serif text-xs text-brand/60 tracking-wider">05 / Terms & Conditions</span>
                   </div>
-                  <h3 className="font-serif text-xl mb-4 text-brand">Terms & Conditions</h3>
-                  <div className="grid md:grid-cols-2 gap-6 text-sm font-light text-brand/70">
+                  <h3 className="font-serif text-2xl mb-4 text-brand">Terms & Conditions</h3>
+                  <div className="grid md:grid-cols-2 gap-6 text-sm font-light text-brand/85">
                     <ul className="space-y-4">
                       <li className="flex items-start gap-2.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
@@ -252,11 +252,11 @@ function Visas() {
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
-                        <span>All issued visas have a <strong>60-day grace period</strong> to enter Dubai from the date of issuance.</span>
+                        <span>All issued visas have a <strong className="font-medium text-brand">60-day grace period</strong> to enter Dubai from the date of issuance.</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
-                        <span>Visa application fees are completely <strong>non-refundable</strong>.</span>
+                        <span>Visa application fees are completely <strong className="font-medium text-brand">non-refundable</strong>.</span>
                       </li>
                     </ul>
                     <ul className="space-y-4">
@@ -289,9 +289,7 @@ function Visas() {
               <p className="text-brand/60 text-sm max-w-xs font-light">
                 Secure your tourist or visitor visa with our rapid concierge processing and unmatched document coordination.
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            </div>            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
               {homeData.popularVisas.map((v) => {
                 // Ensure all headings follow standard "[Country] Visa From Dubai"
                 let cleanCountry = v.country;
@@ -317,39 +315,39 @@ function Visas() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                       
                       {/* Overlay capsule - Displays processing timeline */}
-                      <div className="absolute bottom-4 left-4 bg-white px-3.5 py-1.5 rounded-xl flex flex-col shadow-sm">
-                        <span className="text-[8px] font-sans tracking-widest text-gray-400 font-bold uppercase leading-none mb-0.5">
+                      <div className="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 bg-white px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl flex flex-col shadow-sm">
+                        <span className="text-[7px] sm:text-[8px] font-sans tracking-widest text-gray-400 font-bold uppercase leading-none mb-0.5">
                           {v.badge || "FAST TRACK"}
                         </span>
-                        <span className="text-[10px] font-sans text-sky-600 font-bold leading-none">
+                        <span className="text-[9px] sm:text-[10px] font-sans text-sky-600 font-bold leading-none">
                           {v.processingTime}
                         </span>
                       </div>
                     </div>
 
                     {/* Card Body */}
-                    <div className="p-6 flex flex-col flex-grow justify-between">
+                    <div className="p-4 sm:p-6 flex flex-col flex-grow justify-between">
                       <div>
-                        <div className="flex items-start justify-between gap-2 mb-2">
-                          <h3 className="font-sans text-base font-bold text-gray-900 tracking-tight leading-tight group-hover:text-accent transition-colors">
+                        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1.5 sm:gap-2 mb-2">
+                          <h3 className="font-sans text-sm sm:text-base font-bold text-gray-900 tracking-tight leading-tight group-hover:text-accent transition-colors">
                             {displayHeading}
                           </h3>
-                          <span className="bg-sky-50 text-sky-500 text-[9px] font-sans font-bold tracking-wider px-2 py-0.5 rounded-md shrink-0">
+                          <span className="bg-sky-50 text-sky-500 text-[8px] sm:text-[9px] font-sans font-bold tracking-wider px-1.5 py-0.5 rounded-md self-start shrink-0">
                             VISA
                           </span>
                         </div>
                         
                         {/* Timeline bullet - Get in [processingTime] */}
-                        <div className="flex items-center gap-1.5 text-xs text-gray-500 font-light mt-2.5">
+                        <div className="flex items-center gap-1.5 text-[10px] sm:text-xs text-gray-500 font-light mt-2 sm:mt-2.5">
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
                           <span>Get in {v.processingTime}</span>
                         </div>
                       </div>
 
                       {/* Bottom Price: starting price tag */}
-                      <div className="flex items-baseline gap-2 mt-2 pt-4 border-t border-gray-100/60">
-                        <span className="text-xl font-bold text-gray-900 font-sans">{v.price}</span>
-                        <span className="text-[9px] font-sans tracking-widest text-gray-400 font-bold uppercase">
+                      <div className="flex flex-wrap items-baseline gap-1 sm:gap-2 mt-4 sm:mt-5 pt-3 sm:pt-4 border-t border-gray-100/60">
+                        <span className="text-base sm:text-xl font-bold text-gray-900 font-sans">{v.price}</span>
+                        <span className="text-[8px] sm:text-[9px] font-sans tracking-widest text-gray-400 font-bold uppercase">
                           STARTING PRICE
                         </span>
                       </div>
@@ -358,8 +356,6 @@ function Visas() {
                 );
               })}
             </div>
-            
-           
           </div>
         </section>
 
