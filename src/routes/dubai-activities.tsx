@@ -39,7 +39,7 @@ function DubaiActivities() {
           eyebrow="The Dubai Collection"
           title={<>Dubai, <br /><span className="not-italic">unhurried.</span></>}
           subtitle="Hand-selected experiences that reveal the city's quiet majesty — beyond the brochures."
-          image={skyline}
+          image={falcon}
           alt="Dubai skyline at dusk"
         />
 

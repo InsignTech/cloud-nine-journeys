@@ -6,6 +6,8 @@ import santorini from "@/assets/santorini.jpg";
 import maldives from "@/assets/maldives.jpg";
 import alps from "@/assets/alps.jpg";
 import desert from "@/assets/desert-dawn.jpg";
+import { Globe, Plane, ShieldCheck } from "lucide-react";
+import homeData from "@/data/cloudlife-data.json";
 
 export const Route = createFileRoute("/tour-packages")({
   head: () => ({
@@ -35,10 +37,11 @@ function TourPackages() {
           eyebrow="Curated Journeys"
           title={<>The world, <br /><span className="not-italic">unfolded.</span></>}
           subtitle="Multi-day journeys designed by hand. Each package is a starting point — every detail is yours to shape."
-          image={santorini}
+          image={maldives}
           alt="Santorini at sunset"
         />
 
+             
         <section className="py-32 px-6 md:px-10">
           <div className="max-w-7xl mx-auto space-y-24">
             {packages.map((p, i) => (
@@ -68,6 +71,84 @@ function TourPackages() {
             ))}
           </div>
         </section>
+
+           {/* NEW: Trending Holidays Section */}
+                <section className="bg-brand text-white py-32 px-6 md:px-10">
+                  <div className="max-w-7xl mx-auto">
+                    <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-8">
+                      <div className="max-w-2xl">
+                        <span className="eyebrow text-accent block mb-5">Trending Escapes</span>
+                        <h2 className="font-serif text-5xl md:text-6xl mb-6 leading-[0.95]">
+                          Holiday Packages <br />
+                        </h2>
+                      </div>
+                      {/* <p className="text-white/60 text-sm max-w-xs font-light">
+                        Handpicked global journeys combining luxury flights, bespoke tours, and boutique lodging.
+                      </p> */}
+                    </div>
+        
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                      {homeData.trendingHolidays.map((h) => (
+                        <article
+                          key={h.id}
+                          className="group flex flex-col md:flex-row bg-white/5 border border-white/10 rounded-sm overflow-hidden transition-all duration-300 hover:border-accent/40"
+                        >
+                          <div className="relative md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
+                            <img
+                              src={`/src/assets/${h.imageName}`}
+                              alt={h.title}
+                              loading="lazy"
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            />
+                            <div className="absolute top-4 left-4 bg-accent text-brand text-[9px] uppercase tracking-widest font-bold px-3 py-1 rounded-sm">
+                              {h.tag}
+                            </div>
+                          </div>
+                          
+                          <div className="md:w-1/2 p-8 flex flex-col justify-between">
+                            <div>
+                              <div className="flex items-center gap-1.5 text-accent eyebrow mb-3 text-[10px]">
+                                <Plane className="w-3.5 h-3.5" />
+                                <span>{h.destination}</span>
+                              </div>
+                              <h3 className="font-serif text-2xl italic mb-3 leading-tight text-white">{h.title}</h3>
+                              <p className="text-white/40 text-[11px] tracking-widest uppercase font-sans font-light mb-6">
+                                {h.duration}
+                              </p>
+        
+                              <div className="space-y-2 mb-8">
+                                {h.inclusions.map((inc, i) => (
+                                  <div key={i} className="flex items-center gap-2 text-[12px] text-white/70 font-sans font-light">
+                                    <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0" />
+                                    <span>{inc}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+        
+                            <div className="border-t border-white/10 pt-6 flex justify-between items-center mt-auto">
+                              <div>
+                                <div className="text-[9px] eyebrow text-white/40 mb-1">Starting From</div>
+                                <div className="font-serif text-2xl italic text-accent">{h.price}</div>
+                              </div>
+                              <Link
+                                to="/contact"
+                                className="bg-accent text-brand px-6 py-3.5 text-[9px] uppercase tracking-wider font-bold hover:bg-white hover:text-brand transition-colors"
+                              >
+                                Enquire
+                              </Link>
+                            </div>
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+        
+                   
+                  </div>
+                </section>
+        
+
+
       </main>
       <SiteFooter />
     </>
