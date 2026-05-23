@@ -10,6 +10,9 @@ import multipleEntryVisa from "@/assets/multiple-entry-visa.png";
 import airportVisaChange from "@/assets/airport-visa-change.png";
 import borderVisaChange from "@/assets/border-visa-change.png";
 
+import homeData from "@/data/gokite-data.json";
+
+
 import { 
   FileText, 
   ShieldCheck, 
@@ -271,6 +274,92 @@ function Visas() {
               </div>
 
             </div>
+          </div>
+        </section>
+
+ <section className="bg-canvas py-32 px-6 md:px-10 border-b border-brand/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-8">
+              <div className="max-w-2xl">
+                <span className="eyebrow text-accent block mb-5">Global Entry</span>
+                <h2 className="font-serif text-5xl md:text-7xl leading-[0.95]">
+                  Popular Global <br /><span className="italic">Visa Services</span>
+                </h2>
+              </div>
+              <p className="text-brand/60 text-sm max-w-xs font-light">
+                Secure your tourist or visitor visa with our rapid concierge processing and unmatched document coordination.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {homeData.popularVisas.map((v) => {
+                // Ensure all headings follow standard "[Country] Visa From Dubai"
+                let cleanCountry = v.country;
+                if (cleanCountry.toLowerCase().endsWith("visa")) {
+                  cleanCountry = cleanCountry.substring(0, cleanCountry.toLowerCase().lastIndexOf("visa")).trim();
+                }
+                const displayHeading = `${cleanCountry} Visa From Dubai`;
+
+                return (
+                  <Link
+                    to="/contact"
+                    key={v.id}
+                    className="group flex flex-col bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1"
+                  >
+                    {/* Top flag image with overlay gradient and capsule badge */}
+                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-50 border-b border-gray-100">
+                      <img
+                        src={`https://flagcdn.com/w640/${v.countryCode.toLowerCase()}.png`}
+                        alt={`${v.country} flag`}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                      
+                      {/* Overlay capsule - Displays processing timeline */}
+                      <div className="absolute bottom-4 left-4 bg-white px-3.5 py-1.5 rounded-xl flex flex-col shadow-sm">
+                        <span className="text-[8px] font-sans tracking-widest text-gray-400 font-bold uppercase leading-none mb-0.5">
+                          {v.badge || "FAST TRACK"}
+                        </span>
+                        <span className="text-[10px] font-sans text-sky-600 font-bold leading-none">
+                          {v.processingTime}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Card Body */}
+                    <div className="p-6 flex flex-col flex-grow justify-between">
+                      <div>
+                        <div className="flex items-start justify-between gap-2 mb-2">
+                          <h3 className="font-sans text-base font-bold text-gray-900 tracking-tight leading-tight group-hover:text-accent transition-colors">
+                            {displayHeading}
+                          </h3>
+                          <span className="bg-sky-50 text-sky-500 text-[9px] font-sans font-bold tracking-wider px-2 py-0.5 rounded-md shrink-0">
+                            VISA
+                          </span>
+                        </div>
+                        
+                        {/* Timeline bullet - Get in [processingTime] */}
+                        <div className="flex items-center gap-1.5 text-xs text-gray-500 font-light mt-2.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+                          <span>Get in {v.processingTime}</span>
+                        </div>
+                      </div>
+
+                      {/* Bottom Price: starting price tag */}
+                      <div className="flex items-baseline gap-2 mt-2 pt-4 border-t border-gray-100/60">
+                        <span className="text-xl font-bold text-gray-900 font-sans">{v.price}</span>
+                        <span className="text-[9px] font-sans tracking-widest text-gray-400 font-bold uppercase">
+                          STARTING PRICE
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+            
+           
           </div>
         </section>
 

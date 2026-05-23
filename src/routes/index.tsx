@@ -149,7 +149,10 @@ function Index() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {homeData.popularVisas.map((v) => {
+              {[...homeData.popularVisas] // create copy to avoid mutating original
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 4)
+    .map((v) => {
                 // Ensure all headings follow standard "[Country] Visa From Dubai"
                 let cleanCountry = v.country;
                 if (cleanCountry.toLowerCase().endsWith("visa")) {
