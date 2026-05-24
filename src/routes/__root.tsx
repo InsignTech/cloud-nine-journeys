@@ -10,6 +10,7 @@ import {
 
 import appCss from "../styles.css?url";
 import { ScrollToTopButton } from "../components/ScrollToTopButton";
+import logo from "../assets/logo.png";
 
 function NotFoundComponent() {
   return (
@@ -85,6 +86,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "icon",
+        href: logo,
+        type: "image/png",
+      },
+      {
+        rel: "shortcut icon",
+        href: logo,
       },
     ],
   }),

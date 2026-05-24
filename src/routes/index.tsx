@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
+import { getAssetUrl } from "@/lib/asset-utils";
 import heroMarina from "@/assets/hero-marina.jpg";
 import desertDawn from "@/assets/desert-dawn.jpg";
 import skyline from "@/assets/skyline-gastronomy.jpg";
@@ -280,7 +281,7 @@ function Index() {
                 >
                   <div className="relative md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
                     <img
-                      src={`/src/assets/${h.imageName}`}
+                      src={getAssetUrl(h.imageName)}
                       alt={h.title}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
