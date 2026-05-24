@@ -60,7 +60,7 @@ function Index() {
             <div className="absolute inset-0 bg-gradient-to-t from-brand/70 via-brand/10 to-brand/40" />
           </div>
           <div className="relative z-10 max-w-5xl">
-            <span className="eyebrow text-accent block mb-8 reveal">Cloud Life Travels · Est. Dubai</span>
+            <span className="eyebrow text-accent block mb-8 reveal hidden md:block">Cloud Life Travels · Est. Dubai</span>
             <h1 className="font-serif text-[clamp(4rem,11vw,9rem)] leading-[0.85] text-white italic mb-10 reveal reveal-delay-1">
               Curated <br /><span className="not-italic">Wanderlust.</span>
             </h1>
