@@ -73,7 +73,7 @@ function Index() {
               </Link>
             </div>
           </div>
-          <div className="absolute bottom-8 right-8 z-10 hidden md:flex flex-col items-end gap-2 text-white/60">
+          <div className="absolute bottom-8 right-8 z-10 flex flex-col items-end gap-2 text-white/60">
             <span className="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
             <span className="block w-px h-12 bg-white/40" />
           </div>
