@@ -43,7 +43,7 @@ function Visas() {
       <main className="bg-canvas text-brand">
         <PageHero
           eyebrow="Global Mobility"
-          title={<>Explore beyond <br /><span className="not-italic text-accent">borders.</span></>}
+          title={<>Explore beyond <br /><span className="not-italic ">borders.</span></>}
           subtitle="Planning to bring your family and friends to the UAE for a holiday? You can now easily apply for UAE tourist and multiple visas online with us."
           image={passport}
           alt="Premium passport cover and travel documents"
@@ -326,30 +326,23 @@ function Visas() {
                     </div>
 
                     {/* Card Body */}
-                    <div className="p-4 sm:p-6 flex flex-col flex-grow justify-between">
-                      <div>
-                        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1.5 sm:gap-2 mb-2">
-                          <h3 className="font-sans text-sm sm:text-base font-bold text-gray-900 tracking-tight leading-tight group-hover:text-accent transition-colors">
-                            {displayHeading}
-                          </h3>
-                          <span className="bg-sky-50 text-sky-500 text-[8px] sm:text-[9px] font-sans font-bold tracking-wider px-1.5 py-0.5 rounded-md self-start shrink-0">
-                            VISA
-                          </span>
-                        </div>
-                        
-                        {/* Timeline bullet - Get in [processingTime] */}
-                        <div className="flex items-center gap-1.5 text-[10px] sm:text-xs text-gray-500 font-light mt-2 sm:mt-2.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
-                          <span>Get in {v.processingTime}</span>
-                        </div>
+                    <div className="p-4 sm:p-6 flex flex-col h-full">
+                      <div className="w-8 h-5 sm:w-12 sm:h-8 rounded shadow-sm overflow-hidden mb-3 sm:mb-6 border border-brand/5 shrink-0">
+                        <img
+                          src={`https://flagcdn.com/w160/${v.countryCode.toLowerCase()}.png`}
+                          alt={`${v.country} flag`}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-
-                      {/* Bottom Price: starting price tag */}
-                      <div className="flex flex-wrap items-baseline gap-1 sm:gap-2 mt-4 sm:mt-5 pt-3 sm:pt-4 border-t border-gray-100/60">
-                        <span className="text-base sm:text-xl font-bold text-gray-900 font-sans">{v.price}</span>
-                        <span className="text-[8px] sm:text-[9px] font-sans tracking-widest text-gray-400 font-bold uppercase">
-                          STARTING PRICE
-                        </span>
+                      <h3 className="font-bold text-sm sm:text-lg mb-1 sm:mb-2 group-hover:text-accent transition-colors line-clamp-1">{cleanCountry}</h3>
+                      <div className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-sm text-brand/60 mb-4 sm:mb-6">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+                        <span className="line-clamp-1">{v.processingTime}</span>
+                      </div>
+                      <div className="pt-3 sm:pt-4 border-t border-brand/10 flex flex-col xl:flex-row xl:justify-between xl:items-baseline mt-auto gap-0.5 sm:gap-1">
+                        <span className="text-[8px] sm:text-[10px] text-brand/40 uppercase tracking-wider font-bold">Starting at</span>
+                        <span className="font-bold text-sm sm:text-lg">{v.price}</span>
                       </div>
                     </div>
                   </Link>
@@ -368,7 +361,7 @@ function Visas() {
               <p className="text-brand/55 font-light text-sm mt-3">Premium entry modification and transit services engineered for absolute comfort.</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
               
               {/* Card 1: Multiple Entry Visa */}
               <div className="bg-canvas border border-brand/5 overflow-hidden flex flex-col justify-between group hover:border-accent/20 transition-all">
@@ -380,16 +373,16 @@ function Visas() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-8">
-                    <h3 className="font-serif text-2xl mb-3">Multiple Entry Visa</h3>
-                    <p className="text-sm font-light text-brand/70 leading-relaxed">
+                  <div className="p-4 sm:p-8 flex flex-col flex-grow">
+                    <h3 className="font-serif text-lg sm:text-2xl mb-2 sm:mb-3">Multiple Entry Visa</h3>
+                    <p className="text-xs sm:text-sm font-light text-brand/70 leading-relaxed line-clamp-4">
                       Designed for frequent business executives and leisure travelers. Allows highly flexible, seamless and continuous movement in and out of the UAE.
                     </p>
                   </div>
                 </div>
-                <div className="mx-8 mb-8 pt-6 border-t border-brand/5 flex items-center justify-between text-accent">
-                  <span className="eyebrow text-xs">Request Rates</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <div className="mx-4 sm:mx-8 mb-4 sm:mb-8 pt-4 sm:pt-6 border-t border-brand/5 flex items-center justify-between text-accent mt-auto">
+                  <span className="eyebrow text-[9px] sm:text-xs">Request Rates</span>
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
 
@@ -403,16 +396,16 @@ function Visas() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-8">
-                    <h3 className="font-serif text-2xl mb-3">Airport Visa Change</h3>
-                    <p className="text-sm font-light text-brand/70 leading-relaxed">
+                  <div className="p-4 sm:p-8 flex flex-col flex-grow">
+                    <h3 className="font-serif text-lg sm:text-2xl mb-2 sm:mb-3">Airport Visa Change</h3>
+                    <p className="text-xs sm:text-sm font-light text-brand/70 leading-relaxed line-clamp-4">
                       Extend or change your UAE tourist visa instantly directly at the airport terminal. Fast, stress-free transfers without returning to your home country.
                     </p>
                   </div>
                 </div>
-                <div className="mx-8 mb-8 pt-6 border-t border-brand/5 flex items-center justify-between text-accent">
-                  <span className="eyebrow text-xs">Request Rates</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <div className="mx-4 sm:mx-8 mb-4 sm:mb-8 pt-4 sm:pt-6 border-t border-brand/5 flex items-center justify-between text-accent mt-auto">
+                  <span className="eyebrow text-[9px] sm:text-xs">Request Rates</span>
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
 
@@ -426,16 +419,16 @@ function Visas() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-8">
-                    <h3 className="font-serif text-2xl mb-3">Border to Border Change</h3>
-                    <p className="text-sm font-light text-brand/70 leading-relaxed">
+                  <div className="p-4 sm:p-8 flex flex-col flex-grow">
+                    <h3 className="font-serif text-lg sm:text-2xl mb-2 sm:mb-3">Border to Border Change</h3>
+                    <p className="text-xs sm:text-sm font-light text-brand/70 leading-relaxed line-clamp-4">
                       Economical visa change options via comfortable regional transfers. Full logistics, documentation, and boundary crossing assistance provided.
                     </p>
                   </div>
                 </div>
-                <div className="mx-8 mb-8 pt-6 border-t border-brand/5 flex items-center justify-between text-accent">
-                  <span className="eyebrow text-xs">Request Rates</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <div className="mx-4 sm:mx-8 mb-4 sm:mb-8 pt-4 sm:pt-6 border-t border-brand/5 flex items-center justify-between text-accent mt-auto">
+                  <span className="eyebrow text-[9px] sm:text-xs">Request Rates</span>
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
 

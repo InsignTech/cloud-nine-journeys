@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200..800&family=Italiana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200..800&display=swap");
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -6,7 +6,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-serif: "Italiana", serif;
+  --font-serif: "Inter", sans-serif;
   --font-sans: "Inter", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -36,27 +36,27 @@
 
 :root {
   --radius: 0.25rem;
-  --canvas: oklch(0.985 0.005 80);
-  --brand: oklch(0.21 0.03 265);
-  --accent: oklch(0.72 0.09 75);
-  --accent-foreground: oklch(0.21 0.03 265);
+  --canvas: #ffffff;
+  --brand: #172a51;
+  --accent: #192b53;
+  --accent-foreground: #ffffff;
 
   --background: var(--canvas);
   --foreground: var(--brand);
-  --card: oklch(1 0 0);
+  --card: #ffffff;
   --card-foreground: var(--brand);
-  --popover: oklch(1 0 0);
+  --popover: #ffffff;
   --popover-foreground: var(--brand);
   --primary: var(--brand);
   --primary-foreground: var(--canvas);
-  --secondary: oklch(0.95 0.01 80);
+  --secondary: #f8fafc;
   --secondary-foreground: var(--brand);
-  --muted: oklch(0.95 0.01 80);
-  --muted-foreground: oklch(0.5 0.02 265);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.21 0.03 265 / 0.08);
-  --input: oklch(0.21 0.03 265 / 0.15);
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
   --ring: var(--accent);
 }
 
@@ -81,7 +81,7 @@
     letter-spacing: -0.01em;
   }
   ::selection {
-    background: oklch(0.72 0.09 75 / 0.3);
+    background: #36a4db4d; /* accent with opacity */
   }
 }
 

@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import logo from "@/assets/logo.png";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { to: "/", label: "Home" },
@@ -26,34 +27,34 @@ export function SiteNav({ overlay = false }: { overlay?: boolean }) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 ${
         solid
-          ? "bg-canvas/85 backdrop-blur-xl text-brand border-b border-brand/5 py-4"
-          : "text-white py-6"
+          ? "bg-canvas/95 backdrop-blur-md text-brand border-b border-brand/5 shadow-sm"
+          : "bg-transparent text-white border-transparent"
       }`}
     >
-      <div className="px-6 md:px-10 flex justify-between items-center">
+      <div className="px-6 md:px-12 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 group">
           <img
             src={logo}
             alt="Cloud Life Travels Logo"
             className={`h-10 w-10 md:h-12 md:w-12 object-contain transition-all duration-300 ${
-              solid ? "" : "brightness-0 invert"
+              !solid && "brightness-0 invert"
             }`}
           />
           <div className="flex flex-col leading-none">
-            <span className="font-serif italic text-xl md:text-2xl">Cloud Life</span>
-            <span className="text-[8px] tracking-[0.35em] uppercase opacity-70 mt-0.5">
+            <span className="font-serif text-xl md:text-2xl font-bold">Cloud Life</span>
+            <span className={`text-[8px] tracking-[0.35em] uppercase mt-0.5 ${solid ? "text-brand/60" : "text-white/70"}`}>
               Travel &amp; Beyond
             </span>
           </div>
         </Link>
-        <div className="hidden lg:flex gap-9 items-center text-[11px] uppercase tracking-[0.18em] font-medium">
+        <div className="hidden lg:flex gap-9 items-center text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className="hover:text-accent transition-colors"
+              className={`transition-colors ${solid ? "hover:text-accent" : "hover:text-accent"}`}
               activeProps={{ className: "text-accent" }}
             >
               {l.label}
@@ -61,9 +62,9 @@ export function SiteNav({ overlay = false }: { overlay?: boolean }) {
           ))}
           <Link
             to="/contact"
-            className={`px-6 py-3 border transition-all ${
+            className={`px-6 py-3 border transition-all rounded ${
               solid
-                ? "border-brand/30 hover:bg-brand hover:text-canvas"
+                ? "border-brand/20 hover:bg-brand hover:text-canvas"
                 : "border-white/30 hover:bg-white hover:text-brand"
             }`}
           >
@@ -71,11 +72,11 @@ export function SiteNav({ overlay = false }: { overlay?: boolean }) {
           </Link>
         </div>
         <button
-          className="lg:hidden text-[11px] uppercase tracking-widest"
+          className="lg:hidden flex items-center justify-center p-2 text-current hover:opacity-80 transition-opacity focus:outline-none cursor-pointer"
           onClick={() => setOpen(!open)}
-          aria-label="Menu"
+          aria-label="Toggle Menu"
         >
-          {open ? "Close" : "Menu"}
+          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
       {open && (

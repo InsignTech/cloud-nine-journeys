@@ -89,7 +89,7 @@ function TourPackages() {
                       </p> */}
                     </div>
         
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8">
                       {homeData.trendingHolidays.map((h) => (
                         <article
                           key={h.id}
@@ -107,14 +107,14 @@ function TourPackages() {
                             </div>
                           </div>
                           
-                          <div className="md:w-1/2 p-8 flex flex-col justify-between">
+                          <div className="md:w-1/2 p-4 sm:p-8 flex flex-col justify-between">
                             <div>
                               <div className="flex items-center gap-1.5 text-accent eyebrow mb-3 text-[10px]">
                                 <Plane className="w-3.5 h-3.5" />
                                 <span>{h.destination}</span>
                               </div>
-                              <h3 className="font-serif text-2xl italic mb-3 leading-tight text-white">{h.title}</h3>
-                              <p className="text-white/40 text-[11px] tracking-widest uppercase font-sans font-light mb-6">
+                              <h3 className="font-serif text-base sm:text-2xl italic mb-2 sm:mb-3 leading-tight text-white line-clamp-2">{h.title}</h3>
+                              <p className="text-white/40 text-[9px] sm:text-[11px] tracking-widest uppercase font-sans font-light mb-4 sm:mb-6">
                                 {h.duration}
                               </p>
         
@@ -128,14 +128,14 @@ function TourPackages() {
                               </div>
                             </div>
         
-                            <div className="border-t border-white/10 pt-6 flex justify-between items-center mt-auto">
+                            <div className="border-t border-white/10 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between sm:items-center mt-auto gap-3">
                               <div>
-                                <div className="text-[9px] eyebrow text-white/40 mb-1">Starting From</div>
-                                <div className="font-serif text-2xl italic text-accent">{h.price}</div>
+                                <div className="text-[8px] sm:text-[9px] eyebrow text-white/40 mb-1">Starting From</div>
+                                <div className="font-serif text-lg sm:text-2xl italic text-accent">{h.price}</div>
                               </div>
                               <Link
                                 to="/contact"
-                                className="bg-accent text-brand px-6 py-3.5 text-[9px] uppercase tracking-wider font-bold hover:bg-white hover:text-brand transition-colors"
+                                className="bg-accent text-brand text-center px-4 py-2 sm:px-6 sm:py-3.5 text-[8px] sm:text-[9px] uppercase tracking-wider font-bold hover:bg-white hover:text-brand transition-colors w-full sm:w-auto"
                               >
                                 Enquire
                               </Link>

@@ -4,8 +4,8 @@ import logo from "@/assets/logo.png";
 export function SiteFooter() {
   return (
     <footer className="pt-32 pb-12 px-6 md:px-10 border-t border-brand/10 bg-canvas">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20 max-w-7xl mx-auto">
-        <div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 mb-20 max-w-7xl mx-auto">
+        <div className="col-span-2 md:col-span-1">
           <div className="flex items-center gap-3 mb-6">
             <img
               src={logo}
@@ -13,7 +13,7 @@ export function SiteFooter() {
               className="h-12 w-12 object-contain"
             />
             <div className="flex flex-col leading-none">
-              <span className="font-serif italic text-2xl">Cloud Life</span>
+              <span className="font-sans font-bold text-2xl">Cloud Life</span>
               <span className="text-[9px] tracking-[0.35em] uppercase opacity-50 mt-0.5">
                 Travel &amp; Beyond
               </span>
@@ -24,7 +24,7 @@ export function SiteFooter() {
             Crafted itineraries for the discerning few.
           </p>
         </div>
-        <div>
+        <div className="col-span-1">
           <h5 className="eyebrow mb-6">Exploration</h5>
           <ul className="text-sm space-y-4 text-brand/70 font-light">
             <li><Link to="/dubai-activities" className="hover:text-accent">Dubai Activities</Link></li>
@@ -33,7 +33,7 @@ export function SiteFooter() {
             <li><Link to="/other-services" className="hover:text-accent">Concierge</Link></li>
           </ul>
         </div>
-        <div>
+        <div className="col-span-1">
           <h5 className="eyebrow mb-6">Agency</h5>
           <ul className="text-sm space-y-4 text-brand/70 font-light">
             <li><Link to="/about" className="hover:text-accent">About Us</Link></li>
@@ -42,7 +42,7 @@ export function SiteFooter() {
             <li><a href="#" className="hover:text-accent">Privacy Policy</a></li>
           </ul>
         </div>
-        <div>
+        <div className="col-span-2 md:col-span-1">
           <h5 className="eyebrow mb-6">Connect</h5>
           <ul className="text-sm space-y-4 text-brand/70 font-light">
             <li>
