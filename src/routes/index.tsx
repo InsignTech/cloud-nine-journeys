@@ -7,6 +7,26 @@ import heroImg from "@/assets/hero-marina.jpg";
 import baliImg from "@/assets/bali.jpg";
 import santoriniImg from "@/assets/singapore-image.jpg";
 
+// Destination grid image imports
+import georgiaDest from "@/assets/geo.webp";
+import krabiDest from "@/assets/krabi-dest.jpg";
+import thailandDest from "@/assets/thailand-dest.jpg";
+import dubaiDest from "@/assets/dubai-dest.webp";
+import turkeyDest from "@/assets/turkey.png";
+import europeDest from "@/assets/europe-dest.png";
+import azerbaijanDest from "@/assets/azerbaijan-dest.jpg";
+import franceDest from "@/assets/france.png";
+import singaporeDest from "@/assets/singapore.png";
+import armeniaDest from "@/assets/armenia-dest.jpg";
+import kenyaDest from "@/assets/kenya-dest.png";
+import seychellesDest from "@/assets/seychelles-dest.png";
+import bangkokDest from "@/assets/bangkok-dest.webp";
+import vietnamDest from "@/assets/vietnam.png";
+import haghartsinDest from "@/assets/haghartsin-dest.jpg";
+import tbilisiDest from "@/assets/tbilisi-dest.jpg";
+import switzerlandDest from "@/assets/switzerland-dest.png";
+import kazakhstanDest from "@/assets/kazakhistan-dest.png";
+
 import { useState, useEffect, useCallback } from "react";
 import homeData from "@/data/cloudlife-data.json";
 import { ArrowRight, Globe, Plane, ShieldCheck, ChevronLeft, ChevronRight } from "lucide-react";
@@ -50,6 +70,27 @@ const HERO_SLIDES = [
     primaryBtn: { text: "Explore Visas", link: "/visas" },
     secondaryBtn: { text: "View Packages", link: "/tour-packages" }
   }
+];
+
+const DESTINATIONS = [
+  { id: "georgia", name: "Georgia", size: "short", image: georgiaDest },
+  { id: "krabi", name: "Krabi", size: "short", image: krabiDest },
+  { id: "thailand", name: "Thailand", size: "tall", image: thailandDest },
+  { id: "dubai", name: "Dubai", size: "tall", image: dubaiDest },
+  { id: "turkey", name: "Turkey", size: "short", image: turkeyDest },
+  { id: "europe", name: "Europe", size: "short", image: europeDest },
+  { id: "azerbaijan", name: "Azerbaijan", size: "tall", image: azerbaijanDest },
+  { id: "france", name: "France", size: "short", image: franceDest },
+  { id: "singapore", name: "Singapore", size: "short", image: singaporeDest },
+  { id: "armenia", name: "Armenia", size: "short", image: armeniaDest },
+  { id: "kenya", name: "Kenya", size: "short", image: kenyaDest },
+  { id: "seychelles", name: "Seychelles", size: "tall", image: seychellesDest },
+  { id: "bangkok", name: "Bangkok Pattaya", size: "tall", image: bangkokDest },
+  { id: "vietnam", name: "Vietnam", size: "short", image: vietnamDest },
+  { id: "haghartsin", name: "Haghartsin", size: "tall", image: haghartsinDest },
+  { id: "tbilisi", name: "Tbilisi", size: "short", image: tbilisiDest },
+  { id: "switzerland", name: "Switzerland", size: "tall", image: switzerlandDest },
+  { id: "kazakhstan", name: "Kazakhstan", size: "short", image: kazakhstanDest }
 ];
 
 function Index() {
@@ -217,6 +258,46 @@ function Index() {
           </div>
         </section>
 
+        {/* Popular Destinations Grid Section */}
+        <section className="py-24 px-6 md:px-10 bg-canvas border-b border-brand/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16 max-w-2xl mx-auto">
+              <span className="eyebrow text-accent block mb-4">Dream Getaways</span>
+              <h2 className="text-3xl md:text-5xl font-light tracking-tight mb-4">Popular Destinations</h2>
+              <p className="text-brand/60 font-light">Explore our most popular travel spots and plan your next getaway.</p>
+            </div>
+
+            <div className="columns-2 sm:columns-3 lg:columns-6 gap-4 space-y-4">
+              {DESTINATIONS.map((d) => (
+                <div 
+                  key={d.id} 
+                  className={cn(
+                    "relative rounded-2xl overflow-hidden group mb-4 w-full flex items-center justify-center bg-gradient-to-br from-brand/10 to-brand/5 border border-brand/10 shadow-sm hover:border-accent/30 transition-all duration-300 break-inside-avoid",
+                    d.size === "tall" ? "h-[220px] md:h-[300px]" : "h-[120px] md:h-[160px]"
+                  )}
+                >
+                  {/* Destination Background Image */}
+                  <img 
+                    src={d.image} 
+                    alt={d.name} 
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+
+                  {/* Dark overlay to ensure text readability */}
+                  <div className="absolute inset-0 bg-black/40 z-10 transition-colors duration-300 group-hover:bg-black/50" />
+
+                  {/* Destination Title */}
+                  <div className="absolute z-20 text-center px-4">
+                    <span className="text-white font-sans text-xs md:text-sm font-semibold tracking-wider uppercase drop-shadow-md group-hover:text-accent transition-colors">
+                      {d.name}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Curated Journeys Section */}
         <section className="py-24 px-6 md:px-10 bg-canvas">
           <div className="max-w-7xl mx-auto">
@@ -235,6 +316,7 @@ function Index() {
                       alt={h.title} 
                       className="aspect-[4/5] rounded-xl sm:rounded-2xl mb-4 sm:mb-6"
                       imgClassName="group-hover:scale-105"
+                      priority={true}
                     />
                     <div className="flex flex-col sm:flex-row justify-between items-start gap-1">
                       <div>

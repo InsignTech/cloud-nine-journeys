@@ -5,9 +5,10 @@ interface ShimmerImageProps {
   alt: string;
   className?: string;
   imgClassName?: string;
+  priority?: boolean;
 }
 
-export function ShimmerImage({ src, alt, className = "", imgClassName = "" }: ShimmerImageProps) {
+export function ShimmerImage({ src, alt, className = "", imgClassName = "", priority = false }: ShimmerImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
@@ -18,7 +19,7 @@ export function ShimmerImage({ src, alt, className = "", imgClassName = "" }: Sh
       <img
         src={src}
         alt={alt}
-        loading="lazy"
+        loading={priority ? undefined : "lazy"}
         onLoad={() => setIsLoaded(true)}
         className={`w-full h-full object-cover transition-all duration-700 ${
           isLoaded ? "opacity-100" : "opacity-0"
