@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import logo from "@/assets/logo.png";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 
 const links = [
   { to: "/", label: "Home" },
@@ -27,13 +27,40 @@ export function SiteNav({ overlay = false }: { overlay?: boolean }) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         solid
           ? "bg-canvas/95 backdrop-blur-md text-brand border-b border-brand/5 shadow-sm"
           : "bg-transparent text-white border-transparent"
       }`}
     >
-      <div className="px-6 md:px-12 flex justify-between items-center">
+      {/* Top Contact Bar */}
+      <div
+        className={`w-full text-[10px] md:text-xs hidden md:flex justify-center items-center gap-6 px-6 border-b transition-all duration-300 overflow-hidden ${
+          scrolled ? "max-h-0 py-0 opacity-0 border-transparent" : "max-h-12 py-2 opacity-100"
+        } ${
+          solid
+            ? "bg-[#f8fafc] border-brand/5 text-brand/80"
+            : "bg-black/15 border-white/5 text-white/95"
+        }`}
+      >
+        <div className="flex items-center gap-1.5 flex-wrap justify-center">
+          <Phone className="w-3.5 h-3.5 text-current" />
+          <a href="tel:+971504190737" className="hover:underline transition-colors font-medium">+971 50 419 0737</a>
+          <span className="opacity-55">,</span>
+          <a href="tel:+971586490737" className="hover:underline transition-colors font-medium">+971 58 649 0737</a>
+          <span className="opacity-55">,</span>
+          <a href="tel:+97145726991" className="hover:underline transition-colors font-medium">+971 4 5726991 <span className="text-[9px] opacity-75">Ext: 159</span></a>
+        </div>
+        <span className={solid ? "text-brand/20" : "text-white/20"}>|</span>
+        <div className="flex items-center gap-1.5">
+          <Mail className="w-3.5 h-3.5 text-current" />
+          <a href="mailto:info@cloudlifetravels.com" className="hover:underline transition-colors font-medium">
+            info@cloudlifetravels.com
+          </a>
+        </div>
+      </div>
+
+      <div className="px-6 md:px-12 flex justify-between items-center py-4">
         <Link to="/" className="flex items-center gap-3 group">
           <img
             src={logo}
