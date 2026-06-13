@@ -66,7 +66,7 @@ function DubaiActivities() {
           <p className="font-serif italic text-3xl md:text-5xl max-w-3xl mx-auto leading-tight">
             Want a private itinerary built around these?
           </p>
-          <Link to="/contact" className="inline-block mt-10 bg-accent text-brand px-12 py-5 eyebrow hover:brightness-110 transition-all">
+          <Link to="/contact" className="inline-block mt-10 bg-white text-brand px-12 py-5 eyebrow hover:bg-accent hover:text-white transition-all duration-300 rounded">
             Compose My Day
           </Link>
         </section>
