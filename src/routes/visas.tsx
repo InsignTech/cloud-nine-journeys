@@ -14,15 +14,14 @@ import homeData from "@/data/cloudlife-data.json";
 
 
 import { 
-  FileText, 
-  ShieldCheck, 
-  Info, 
-  BadgeAlert, 
-  Eye, 
-  Users, 
-  ArrowRight,
-  PhoneCall 
-} from "lucide-react";
+  FaFileAlt, 
+  FaUsers, 
+  FaEye, 
+  FaExclamationTriangle, 
+  FaInfoCircle,
+  FaPhoneAlt 
+} from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/visas")({
   head: () => ({
@@ -199,8 +198,8 @@ function Visas() {
               <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="bg-accent/10 p-3 text-accent">
-                      <FileText className="w-6 h-6" />
+                    <div className="bg-accent/10 p-3 text-accent rounded-lg">
+                      <FaFileAlt className="w-5 h-5" />
                     </div>
                     <span className="font-serif text-xs text-brand/100 tracking-wider">01 / Required Files</span>
                   </div>
@@ -222,8 +221,8 @@ function Visas() {
               <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="bg-accent/10 p-3 text-accent">
-                      <Users className="w-6 h-6" />
+                    <div className="bg-accent/10 p-3 text-accent rounded-lg">
+                      <FaUsers className="w-5 h-5" />
                     </div>
                     <span className="font-serif text-xs text-brand/100 tracking-wider">02 / Entry Policies</span>
                   </div>
@@ -249,8 +248,8 @@ function Visas() {
               <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="bg-accent/10 p-3 text-accent">
-                      <Eye className="w-6 h-6" />
+                    <div className="bg-accent/10 p-3 text-accent rounded-lg">
+                      <FaEye className="w-5 h-5" />
                     </div>
                     <span className="font-serif text-xs text-brand/100 tracking-wider">03 / Border Security</span>
                   </div>
@@ -276,8 +275,8 @@ function Visas() {
               <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between lg:col-span-1 lg:col-start-1">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="bg-accent/10 p-3 text-accent">
-                      <BadgeAlert className="w-6 h-6" />
+                    <div className="bg-accent/10 p-3 text-accent rounded-lg">
+                      <FaExclamationTriangle className="w-5 h-5" />
                     </div>
                     <span className="font-serif text-xs text-brand/100 tracking-wider">04 / Guarantor Rules</span>
                   </div>
@@ -310,8 +309,8 @@ function Visas() {
               <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between lg:col-span-2">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="bg-accent/10 p-3 text-accent">
-                      <Info className="w-6 h-6" />
+                    <div className="bg-accent/10 p-3 text-accent rounded-lg">
+                      <FaInfoCircle className="w-5 h-5" />
                     </div>
                     <span className="font-serif text-xs text-brand/100 tracking-wider">05 / Terms & Conditions</span>
                   </div>
@@ -530,11 +529,11 @@ function Visas() {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <a href="tel:+971504190737" className="flex items-center gap-3 bg-brand/5 border border-brand/10 hover:border-accent/40 px-6 py-4 transition-colors">
-                <span className="bg-accent/15 p-2 rounded-full text-accent"><PhoneCall className="w-4 h-4" /></span>
+                <span className="bg-accent/15 p-2 rounded-full text-accent flex items-center justify-center"><FaPhoneAlt className="w-3.5 h-3.5" /></span>
                 <span className="text-sm font-medium text-brand">+971 50 419 0737</span>
               </a>
               <a href="tel:+971586490737" className="flex items-center gap-3 bg-brand/5 border border-brand/10 hover:border-accent/40 px-6 py-4 transition-colors">
-                <span className="bg-accent/15 p-2 rounded-full text-accent"><PhoneCall className="w-4 h-4" /></span>
+                <span className="bg-accent/15 p-2 rounded-full text-accent flex items-center justify-center"><FaPhoneAlt className="w-3.5 h-3.5" /></span>
                 <span className="text-sm font-medium text-brand">+971 58 649 0737</span>
               </a>
             </div>

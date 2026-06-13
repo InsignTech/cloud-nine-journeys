@@ -79,7 +79,7 @@ function TourPackages() {
                   <div className="max-w-7xl mx-auto">
                     <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-8">
                       <div className="max-w-2xl">
-                        <span className="eyebrow text-accent block mb-5">Trending Escapes</span>
+                        <span className="eyebrow text-white/60 block mb-5">Trending Escapes</span>
                         <h2 className="font-serif text-5xl md:text-6xl mb-6 leading-[0.95]">
                           Holiday Packages <br />
                         </h2>
@@ -93,7 +93,7 @@ function TourPackages() {
                       {homeData.trendingHolidays.map((h) => (
                         <article
                           key={h.id}
-                          className="group flex flex-col md:flex-row bg-white/5 border border-white/10 rounded-sm overflow-hidden transition-all duration-300 hover:border-accent/40"
+                          className="group flex flex-col md:flex-row bg-white/5 border border-white/10 rounded-sm overflow-hidden transition-all duration-300 hover:border-white/30"
                         >
                           <div className="relative md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
                             <img
@@ -102,15 +102,15 @@ function TourPackages() {
                               loading="lazy"
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             />
-                            <div className="absolute top-4 left-4 bg-accent text-brand text-[9px] uppercase tracking-widest font-bold px-3 py-1 rounded-sm">
+                            <div className="absolute top-4 left-4 bg-white/10 backdrop-blur-md text-white text-[9px] uppercase tracking-widest font-bold px-3 py-1 border border-white/20 rounded-sm">
                               {h.tag}
                             </div>
                           </div>
                           
                           <div className="md:w-1/2 p-4 sm:p-8 flex flex-col justify-between">
                             <div>
-                              <div className="flex items-center gap-1.5 text-accent eyebrow mb-3 text-[10px]">
-                                <Plane className="w-3.5 h-3.5" />
+                              <div className="flex items-center gap-1.5 text-white/60 eyebrow mb-3 text-[10px]">
+                                <Plane className="w-3.5 h-3.5 text-white/50" />
                                 <span>{h.destination}</span>
                               </div>
                               <h3 className="font-serif text-base sm:text-2xl italic mb-2 sm:mb-3 leading-tight text-white line-clamp-2">{h.title}</h3>
@@ -120,8 +120,8 @@ function TourPackages() {
         
                               <div className="space-y-2 mb-8">
                                 {h.inclusions.map((inc, i) => (
-                                  <div key={i} className="flex items-center gap-2 text-[12px] text-white/70 font-sans font-light">
-                                    <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0" />
+                                  <div key={i} className="flex items-center gap-2 text-[12px] text-white/80 font-sans font-light">
+                                    <ShieldCheck className="w-3.5 h-3.5 text-white/60 shrink-0" />
                                     <span>{inc}</span>
                                   </div>
                                 ))}
@@ -131,11 +131,11 @@ function TourPackages() {
                             <div className="border-t border-white/10 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between sm:items-center mt-auto gap-3">
                               <div>
                                 <div className="text-[8px] sm:text-[9px] eyebrow text-white/40 mb-1">Starting From</div>
-                                <div className="font-serif text-lg sm:text-2xl italic text-accent">{h.price}</div>
+                                <div className="font-serif text-lg sm:text-2xl italic text-white font-bold">{h.price}</div>
                               </div>
                               <Link
                                 to="/contact"
-                                className="bg-accent text-brand text-center px-4 py-2 sm:px-6 sm:py-3.5 text-[8px] sm:text-[9px] uppercase tracking-wider font-bold hover:bg-white hover:text-brand transition-colors w-full sm:w-auto"
+                                className="bg-white text-brand text-center px-4 py-2 sm:px-6 sm:py-3.5 text-[8px] sm:text-[9px] uppercase tracking-wider font-bold hover:bg-brand hover:text-white border border-white transition-all w-full sm:w-auto"
                               >
                                 Enquire
                               </Link>
