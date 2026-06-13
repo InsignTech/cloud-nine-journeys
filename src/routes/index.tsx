@@ -1,11 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
-import { getAssetUrl } from "@/lib/asset-utils";
-import { ShimmerImage } from "@/components/ShimmerImage";
 import heroImg from "@/assets/hero-marina.jpg";
 import baliImg from "@/assets/bali.jpg";
 import santoriniImg from "@/assets/singapore-image.jpg";
+// Curated journeys — static imports so Vite bundles & caches them correctly
+import georgiaJourneyImg from "@/assets/georgia.webp";
+import baliJourneyImg from "@/assets/bali.jpg";
+import singaporeJourneyImg from "@/assets/singapore-image.jpg";
 
 // Destination grid image imports
 import georgiaDest from "@/assets/geo.webp";
@@ -307,29 +309,33 @@ function Index() {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-              {[...homeData.trendingHolidays]
-                .slice(0, 3)
-                .map((h) => (
-                  <Link to="/tour-packages" key={h.id} className="group block">
-                    <ShimmerImage 
-                      src={getAssetUrl(h.imageName)} 
-                      alt={h.title} 
-                      className="aspect-[4/5] rounded-xl sm:rounded-2xl mb-4 sm:mb-6"
-                      imgClassName="group-hover:scale-105"
-                      priority={true}
+              {(
+                [
+                  { ...homeData.trendingHolidays[0], img: georgiaJourneyImg },
+                  { ...homeData.trendingHolidays[1], img: baliJourneyImg },
+                  { ...homeData.trendingHolidays[2], img: singaporeJourneyImg },
+                ] as Array<typeof homeData.trendingHolidays[0] & { img: string }>
+              ).map((h) => (
+                <Link to="/tour-packages" key={h.id} className="group block">
+                  <div className="aspect-[4/5] rounded-xl sm:rounded-2xl mb-4 sm:mb-6 overflow-hidden bg-brand/5">
+                    <img
+                      src={h.img}
+                      alt={h.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
-                    <div className="flex flex-col sm:flex-row justify-between items-start gap-1">
-                      <div>
-                        <h3 className="text-sm sm:text-xl font-bold mb-0.5 sm:mb-1">{h.destination}</h3>
-                        <p className="text-[10px] sm:text-sm text-brand/50">{h.duration}</p>
-                      </div>
-                      <div className="text-left sm:text-right mt-1 sm:mt-0">
-                        <span className="block text-[10px] text-brand/40 uppercase tracking-wider font-bold mb-1">From</span>
-                        <span className="font-bold text-accent">{h.price}</span>
-                      </div>
+                  </div>
+                  <div className="flex flex-col sm:flex-row justify-between items-start gap-1">
+                    <div>
+                      <h3 className="text-sm sm:text-xl font-bold mb-0.5 sm:mb-1">{h.destination}</h3>
+                      <p className="text-[10px] sm:text-sm text-brand/50">{h.duration}</p>
                     </div>
-                  </Link>
-                ))}
+                    <div className="text-left sm:text-right mt-1 sm:mt-0">
+                      <span className="block text-[10px] text-brand/40 uppercase tracking-wider font-bold mb-1">From</span>
+                      <span className="font-bold text-accent">{h.price}</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
             </div>
             
             <div className="mt-16 text-center">
