@@ -12,6 +12,7 @@ import alBadiyahMosque from "@/assets/al-badiyah-mosque.jpg";
 import downtownDubai from "@/assets/downtown-dubai.jpg";
 import dubaiHero from "@/assets/dub2.jpg";
 import khasabFort from "@/assets/khasab-fort.jpg";
+import ferrariWorld from "@/assets/ferrari-world.jpg";
 
 export const Route = createFileRoute("/tour-packages")({
   head: () => ({
@@ -53,7 +54,7 @@ const tours = [
       { src: "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=600&q=80", caption: "Sheikh Zayed Grand Mosque" },
       { src: "https://images.unsplash.com/photo-1618083707368-b3823daa2726?auto=format&fit=crop&w=600&q=80", caption: "Louvre Abu Dhabi" },
       { src: emiratesPalace, caption: "Emirates Palace Hotel" },
-      { src: "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=600&q=80", caption: "Ferrari World Abu Dhabi" }
+      { src: ferrariWorld, caption: "Ferrari World Abu Dhabi" }
     ]
   },
   {
@@ -225,14 +226,14 @@ export function TourCarousel({ images }: { images: { src: string; caption: strin
 
       <button
         onClick={slidePrev}
-        className="absolute -left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-brand/10 text-brand flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-brand hover:text-canvas cursor-pointer z-10"
+        className="absolute left-2 md:-left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-brand/10 text-brand flex items-center justify-center shadow-lg opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity hover:bg-brand hover:text-canvas cursor-pointer z-10"
         aria-label="Previous Attraction"
       >
         <ChevronLeft className="w-5 h-5" />
       </button>
       <button
         onClick={slideNext}
-        className="absolute -right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-brand/10 text-brand flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity hover:bg-brand hover:text-canvas cursor-pointer z-10"
+        className="absolute right-2 md:-right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-brand/10 text-brand flex items-center justify-center shadow-lg opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity hover:bg-brand hover:text-canvas cursor-pointer z-10"
         aria-label="Next Attraction"
       >
         <ChevronRight className="w-5 h-5" />
