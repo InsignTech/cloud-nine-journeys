@@ -6,7 +6,7 @@ import { getAssetUrl } from "@/lib/asset-utils";
 import dubai1 from "@/assets/duabi1-v2-high-quality.jpg";
 import desertDawn from "@/assets/desert-dawn.jpg";
 import skyline from "@/assets/skyline-gastronomy.jpg";
-import yacht from "@/assets/yacht.jpg";
+import downtownDubai from "@/assets/downtown-dubai.jpg";
 import passport from "@/assets/passport.jpg";
 import santorini from "@/assets/santorini.jpg";
 import maldives from "@/assets/maldives.jpg";
@@ -40,8 +40,8 @@ const holidayPlaceholderImages: Record<string, string> = {
 
 const activities = [
   { title: "Celestial Desert Safaris", tag: "Activities / Private Tour", img: desertDawn, alt: "Hot air balloons over Arabian dunes at dawn" },
-  { title: "Skyline Gastronomy", tag: "Dining / Exclusive", img: skyline, alt: "Burj Khalifa skyline at dusk", offset: true },
-  { title: "Private Marine Voyages", tag: "Yachting / Bespoke", img: yacht, alt: "Luxury yacht deck with champagne" },
+  { title: "Dubai City Tours", tag: "Activities / Guided Tour", img: skyline, alt: "Tourists visiting iconic Dubai landmarks like Museum of the Future", offset: true },
+  { title: "Downtown Dubai", tag: "Sightseeing / Iconic", img: downtownDubai, alt: "Burj Khalifa and Dubai Fountain at twilight" },
 ];
 
 const destinations = [
