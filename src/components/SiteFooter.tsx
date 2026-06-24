@@ -15,7 +15,7 @@ export function SiteFooter() {
             <div className="flex flex-col leading-none">
               <span className="font-serif italic text-2xl">Cloud Life</span>
               <span className="text-[9px] tracking-[0.35em] uppercase opacity-50 mt-0.5">
-                Travel &amp; Beyond
+                Travel Beyond
               </span>
             </div>
           </div>

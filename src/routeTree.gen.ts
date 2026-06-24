@@ -11,8 +11,10 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VisasRouteImport } from './routes/visas'
 import { Route as TourPackagesRouteImport } from './routes/tour-packages'
+import { Route as TestimonialsRouteImport } from './routes/testimonials'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as OtherServicesRouteImport } from './routes/other-services'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as DubaiActivitiesRouteImport } from './routes/dubai-activities'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
@@ -28,6 +30,11 @@ const TourPackagesRoute = TourPackagesRouteImport.update({
   path: '/tour-packages',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TestimonialsRoute = TestimonialsRouteImport.update({
+  id: '/testimonials',
+  path: '/testimonials',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -36,6 +43,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const OtherServicesRoute = OtherServicesRouteImport.update({
   id: '/other-services',
   path: '/other-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DubaiActivitiesRoute = DubaiActivitiesRouteImport.update({
@@ -64,8 +76,10 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/dubai-activities': typeof DubaiActivitiesRoute
+  '/gallery': typeof GalleryRoute
   '/other-services': typeof OtherServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/testimonials': typeof TestimonialsRoute
   '/tour-packages': typeof TourPackagesRoute
   '/visas': typeof VisasRoute
 }
@@ -74,8 +88,10 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/dubai-activities': typeof DubaiActivitiesRoute
+  '/gallery': typeof GalleryRoute
   '/other-services': typeof OtherServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/testimonials': typeof TestimonialsRoute
   '/tour-packages': typeof TourPackagesRoute
   '/visas': typeof VisasRoute
 }
@@ -85,8 +101,10 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/dubai-activities': typeof DubaiActivitiesRoute
+  '/gallery': typeof GalleryRoute
   '/other-services': typeof OtherServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/testimonials': typeof TestimonialsRoute
   '/tour-packages': typeof TourPackagesRoute
   '/visas': typeof VisasRoute
 }
@@ -97,8 +115,10 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/dubai-activities'
+    | '/gallery'
     | '/other-services'
     | '/sitemap.xml'
+    | '/testimonials'
     | '/tour-packages'
     | '/visas'
   fileRoutesByTo: FileRoutesByTo
@@ -107,8 +127,10 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/dubai-activities'
+    | '/gallery'
     | '/other-services'
     | '/sitemap.xml'
+    | '/testimonials'
     | '/tour-packages'
     | '/visas'
   id:
@@ -117,8 +139,10 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/dubai-activities'
+    | '/gallery'
     | '/other-services'
     | '/sitemap.xml'
+    | '/testimonials'
     | '/tour-packages'
     | '/visas'
   fileRoutesById: FileRoutesById
@@ -128,8 +152,10 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   DubaiActivitiesRoute: typeof DubaiActivitiesRoute
+  GalleryRoute: typeof GalleryRoute
   OtherServicesRoute: typeof OtherServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TestimonialsRoute: typeof TestimonialsRoute
   TourPackagesRoute: typeof TourPackagesRoute
   VisasRoute: typeof VisasRoute
 }
@@ -150,6 +176,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TourPackagesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/testimonials': {
+      id: '/testimonials'
+      path: '/testimonials'
+      fullPath: '/testimonials'
+      preLoaderRoute: typeof TestimonialsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -162,6 +195,13 @@ declare module '@tanstack/react-router' {
       path: '/other-services'
       fullPath: '/other-services'
       preLoaderRoute: typeof OtherServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dubai-activities': {
@@ -200,8 +240,10 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   DubaiActivitiesRoute: DubaiActivitiesRoute,
+  GalleryRoute: GalleryRoute,
   OtherServicesRoute: OtherServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TestimonialsRoute: TestimonialsRoute,
   TourPackagesRoute: TourPackagesRoute,
   VisasRoute: VisasRoute,
 }
