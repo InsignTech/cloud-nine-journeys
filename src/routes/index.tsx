@@ -8,9 +8,9 @@ import desertDawn from "@/assets/desert-dawn.jpg";
 import skyline from "@/assets/skyline-gastronomy.jpg";
 import downtownDubai from "@/assets/downtown-dubai.jpg";
 import passport from "@/assets/passport.jpg";
-import santorini from "@/assets/santorini.jpg";
-import maldives from "@/assets/maldives.jpg";
-import alps from "@/assets/alps.jpg";
+import georgiaTour from "@/assets/georgia-tour.jpg";
+import sriLankaTour from "@/assets/sri-lanka-tour.jpg";
+import thailandTour from "@/assets/thailand-tour.jpg";
 
 // Import Go Kite static data
 import homeData from "@/data/cloudlife-data.json";
@@ -32,10 +32,10 @@ export const Route = createFileRoute("/")({
 
 // Mapping for placeholder images
 const holidayPlaceholderImages: Record<string, string> = {
-  "georgia-summer": santorini,
-  "bali-retreat": maldives,
+  "georgia-summer": georgiaTour,
+  "bali-retreat": sriLankaTour,
   "singapore-malaysia": skyline,
-  "swiss-paris": alps,
+  "swiss-paris": thailandTour,
 };
 
 const activities = [
@@ -45,9 +45,9 @@ const activities = [
 ];
 
 const destinations = [
-  { title: "Santorini", region: "Cyclades, Greece", img: santorini },
-  { title: "Maldives", region: "Indian Ocean", img: maldives },
-  { title: "The Alps", region: "Switzerland", img: alps },
+  { title: "Georgia", region: "Caucasus Mountains", img: georgiaTour },
+  { title: "Sri Lanka", region: "South Asia", img: sriLankaTour },
+  { title: "Thailand", region: "Southeast Asia", img: thailandTour },
 ];
 
 function Index() {
