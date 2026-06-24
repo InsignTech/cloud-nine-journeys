@@ -5,6 +5,13 @@ import { PageHero } from "@/components/PageHero";
 import { useEffect, useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import bali from "@/assets/bali.jpg";
+import dubaiMarinaSkyline from "@/assets/dubai-marina-skyline.jpg";
+import emiratesPalace from "@/assets/emirates-palace.jpg";
+import rakBeachfront from "@/assets/rak-beachfront.jpg";
+import alBadiyahMosque from "@/assets/al-badiyah-mosque.jpg";
+import downtownDubai from "@/assets/downtown-dubai.jpg";
+import dubaiHero from "@/assets/dub2.jpg";
+import khasabFort from "@/assets/khasab-fort.jpg";
 
 export const Route = createFileRoute("/tour-packages")({
   head: () => ({
@@ -30,7 +37,7 @@ const tours = [
     images: [
       { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80", caption: "Burj Khalifa & Downtown" },
       { src: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?auto=format&fit=crop&w=600&q=80", caption: "The Dubai Frame" },
-      { src: "https://images.unsplash.com/photo-1546412414-e1885261b951?auto=format&fit=crop&w=600&q=80", caption: "Dubai Marina Skyline" },
+      { src: dubaiMarinaSkyline, caption: "Dubai Marina Skyline" },
       { src: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=600&q=80", caption: "Dubai Mall & Fountain" }
     ]
   },
@@ -45,7 +52,7 @@ const tours = [
     images: [
       { src: "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=600&q=80", caption: "Sheikh Zayed Grand Mosque" },
       { src: "https://images.unsplash.com/photo-1618083707368-b3823daa2726?auto=format&fit=crop&w=600&q=80", caption: "Louvre Abu Dhabi" },
-      { src: "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?auto=format&fit=crop&w=600&q=80", caption: "Emirates Palace Hotel" },
+      { src: emiratesPalace, caption: "Emirates Palace Hotel" },
       { src: "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=600&q=80", caption: "Ferrari World Abu Dhabi" }
     ]
   },
@@ -61,7 +68,7 @@ const tours = [
       { src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=600&q=80", caption: "Jebel Jais Peaks" },
       { src: "https://images.unsplash.com/photo-1568849676085-51415703900f?auto=format&fit=crop&w=600&q=80", caption: "Dhayah Fort Lookout" },
       { src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80", caption: "Al Marjan Coastline" },
-      { src: "https://images.unsplash.com/photo-1634842517865-c9bb3e3a4e9b?auto=format&fit=crop&w=600&q=80", caption: "RAK Beachfront" }
+      { src: rakBeachfront, caption: "RAK Beachfront" }
     ]
   },
   {
@@ -90,7 +97,7 @@ const tours = [
     images: [
       { src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80", caption: "East Coast Fjords" },
       { src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80", caption: "Snoopy Island Reefs" },
-      { src: "https://images.unsplash.com/photo-1590076247267-e567a7c03715?auto=format&fit=crop&w=600&q=80", caption: "Al Badiyah Mosque" },
+      { src: alBadiyahMosque, caption: "Al Badiyah Mosque" },
       { src: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=600&q=80", caption: "Dibba Boat Cruising" }
     ]
   },
@@ -106,7 +113,7 @@ const tours = [
       { src: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80", caption: "Limestone Fjord Cliffs" },
       { src: "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?auto=format&fit=crop&w=600&q=80", caption: "Dhow Boat Excursion" },
       { src: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80", caption: "Snorkeling Channels" },
-      { src: "https://images.unsplash.com/photo-1570481662006-a3a13746fe4e?auto=format&fit=crop&w=600&q=80", caption: "Musandam Dolphin Pods" }
+      { src: "https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&w=600&q=80", caption: "Musandam Dolphin Pods" }
     ]
   },
   {
@@ -119,7 +126,7 @@ const tours = [
     ],
     images: [
       { src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80", caption: "Telegraph Island Shore" },
-      { src: "https://images.unsplash.com/photo-1590076247267-e567a7c03715?auto=format&fit=crop&w=600&q=80", caption: "Khasab Castle Fort" },
+      { src: khasabFort, caption: "Khasab Castle Fort" },
       { src: "https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&w=600&q=80", caption: "Wild Dolphin Encounters" },
       { src: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=600&q=80", caption: "Fjord Cliffs at Noon" }
     ]
@@ -243,7 +250,7 @@ function TourPackages() {
           eyebrow="Excursions & Guides"
           title={<>Bespoke local <br /><span className="not-italic">adventures.</span></>}
           subtitle="Explore the most scenic tours across the Emirates and Oman. Every city tour is fully guided, customizable, and curated to perfection."
-          image={bali}
+          image={dubaiHero}
           alt="Luxury tours in Dubai"
         />
 

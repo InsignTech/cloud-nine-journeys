@@ -1,7 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 
 const WA_URL =
-  "https://api.whatsapp.com/send/?phone=971526874401&text&type=phone_number&app_absent=0";
+  "https://api.whatsapp.com/send/?phone=971504190737&text&type=phone_number&app_absent=0";
 
 export function WhatsAppButton() {
   return (
