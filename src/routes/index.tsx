@@ -235,7 +235,7 @@ function Index() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-4 md:gap-8">
               {tourPackages.map((h) => (
                 <article
                   key={h.id}
@@ -248,36 +248,36 @@ function Index() {
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute top-4 left-4 bg-accent text-brand text-[9px] uppercase tracking-widest font-bold px-3 py-1 rounded-sm">
+                    <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-accent text-brand text-[7px] sm:text-[9px] uppercase tracking-widest font-bold px-2 py-0.5 sm:px-3 sm:py-1 rounded-sm">
                       {h.tag}
                     </div>
                   </div>
 
-                  <div className="md:w-1/2 p-8 flex flex-col justify-between">
+                  <div className="md:w-1/2 p-4 sm:p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center gap-1.5 text-accent eyebrow mb-3 text-[10px]">
-                        <Plane className="w-3.5 h-3.5" />
+                      <div className="flex items-center gap-1 sm:gap-1.5 text-accent eyebrow mb-1.5 sm:mb-3 text-[8px] sm:text-[10px]">
+                        <Plane className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
                         <span>{h.destination}</span>
                       </div>
-                      <h3 className="font-serif text-2xl italic mb-3 leading-tight text-white">{h.title}</h3>
-                      <p className="text-white/40 text-[11px] tracking-widest uppercase font-sans font-light mb-6">
+                      <h3 className="font-serif text-base sm:text-2xl italic mb-1.5 sm:mb-3 leading-tight text-white">{h.title}</h3>
+                      <p className="text-white/40 text-[9px] sm:text-[11px] tracking-widest uppercase font-sans font-light mb-4 sm:mb-6">
                         {h.duration}
                       </p>
 
-                      <div className="space-y-2 mb-8">
+                      <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-8">
                         {h.inclusions.map((inc, i) => (
-                          <div key={i} className="flex items-center gap-2 text-[12px] text-white/70 font-sans font-light">
-                            <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0" />
-                            <span>{inc}</span>
+                          <div key={i} className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-[12px] text-white/70 font-sans font-light">
+                            <ShieldCheck className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-accent shrink-0" />
+                            <span className="truncate">{inc}</span>
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    <div className="border-t border-white/10 pt-6 flex justify-end items-center mt-auto">
+                    <div className="border-t border-white/10 pt-4 sm:pt-6 flex justify-end items-center mt-auto">
                       <Link
                         to="/contact"
-                        className="bg-accent text-brand px-6 py-3.5 text-[9px] uppercase tracking-wider font-bold hover:bg-white hover:text-brand transition-colors"
+                        className="bg-accent text-brand px-4 py-2.5 sm:px-6 sm:py-3.5 text-[8px] sm:text-[9px] uppercase tracking-wider font-bold hover:bg-white hover:text-brand transition-colors"
                       >
                         Enquire
                       </Link>
