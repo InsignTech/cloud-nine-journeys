@@ -14,15 +14,18 @@ import homeData from "@/data/cloudlife-data.json";
 
 
 import {
-  FileText,
-  ShieldCheck,
-  Info,
-  BadgeAlert,
-  Eye,
-  Users,
-  ArrowRight,
-  PhoneCall
+  ArrowRight
 } from "lucide-react";
+
+import {
+  FaFileAlt,
+  FaUsers,
+  FaEye,
+  FaExclamationTriangle,
+  FaInfoCircle,
+  FaPhoneAlt
+} from "react-icons/fa";
+
 
 export const Route = createFileRoute("/visas")({
   head: () => ({
@@ -63,51 +66,123 @@ function Visas() {
           </div>
         </section>
 
-        {/* Interactive Visa Options Image Overlay (Matches User's Request Screenshot) */}
+        {/* Interactive Visa Options Redesign */}
         <section className="pb-32 px-6 md:px-10">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
               <span className="eyebrow text-accent block mb-3">Flexible Durations</span>
-              <h3 className="font-serif text-2xl md:text-4xl">Select Your Tourist Visa Option</h3>
-              <p className="text-brand/60 font-light text-xs md:text-sm mt-2">
-                Click a plan or speak to an expert directly to arrange quick turnaround visa processing.
+              <h3 className="font-serif text-3xl md:text-5xl">Select Your Tourist Visa Option</h3>
+              <p className="text-brand/60 font-light text-sm max-w-xl mx-auto mt-3">
+                Choose the perfect duration for your trip. Speak with our concierge team for immediate end-to-end processing.
               </p>
             </div>
 
-            {/* Premium Interactive Backdrop Container */}
-            <div className="relative h-[480px] xs:h-[540px] sm:h-auto sm:aspect-[16/9] w-full overflow-hidden border border-brand/10 shadow-2xl group">
-              {/* Background Image */}
-              <img
-                src={dubaiVisaHero}
-                alt="Dubai Skyline and modern flyovers"
-                className="w-full h-full object-cover grayscale-[20%] group-hover:scale-102 transition-transform duration-700 brightness-[0.65]"
-              />
+            {/* Redesigned Visa Options Cards */}
+            <div className="grid md:grid-cols-3 gap-8">
 
-              {/* Overlay Glassmorphic Options */}
-              <div className="absolute inset-0 flex flex-col sm:flex-row items-center justify-around p-6 gap-4 sm:gap-4 select-none">
-
-                {/* Option 1: 14 Days */}
-                <div className="flex flex-col items-center justify-center bg-brand/35 backdrop-blur-md border border-white/20 rounded-full w-28 h-28 xs:w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 text-center cursor-pointer transition-all hover:scale-105 hover:bg-accent hover:border-accent hover:text-brand text-white shadow-[0_0_20px_rgba(255,255,255,0.05)] group/circle">
-                  <span className="font-serif text-2xl xs:text-3xl md:text-4xl font-bold tracking-tight mb-0.5 md:mb-1">14</span>
-                  <span className="font-sans text-[10px] xs:text-xs md:text-sm tracking-widest uppercase font-semibold">Days Visa</span>
-                  <span className="text-[8px] xs:text-[10px] opacity-0 group-hover/circle:opacity-100 transition-opacity duration-300 font-light mt-0.5 md:mt-1">Single Entry</span>
+              {/* Option 1: 14 Days */}
+              <Link
+                to="/contact"
+                className="group relative flex flex-col justify-between bg-white border border-brand/10 p-8 rounded-2xl shadow-[0_4px_24px_rgba(23,42,81,0.02)] transition-all duration-300 hover:shadow-[0_16px_40px_rgba(23,42,81,0.06)] hover:-translate-y-1 hover:border-accent/40"
+              >
+                <div>
+                  <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-brand/40">Short Getaway</span>
+                  <div className="flex items-baseline gap-2 mt-4 mb-6">
+                    <span className="font-serif text-5xl md:text-6xl font-bold text-brand leading-none">14</span>
+                    <span className="text-xs text-brand/50 font-light uppercase tracking-wider font-sans">Days Visa</span>
+                  </div>
+                  <div className="h-[1px] w-full bg-brand/5 my-6" />
+                  <ul className="space-y-4 text-sm font-light text-brand/75 mb-8">
+                    <li className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                      <span>Single Entry Tourist Permit</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent/45 shrink-0" />
+                      <span>60 Days Entry Validity</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent/45 shrink-0" />
+                      <span>Ideal for Business &amp; Layovers</span>
+                    </li>
+                  </ul>
                 </div>
-
-                {/* Option 2: 30 Days */}
-                <div className="flex flex-col items-center justify-center bg-brand/35 backdrop-blur-md border border-white/20 rounded-full w-28 h-28 xs:w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 text-center cursor-pointer transition-all hover:scale-105 hover:bg-accent hover:border-accent hover:text-brand text-white shadow-[0_0_20px_rgba(255,255,255,0.05)] group/circle">
-                  <span className="font-serif text-2xl xs:text-3xl md:text-4xl font-bold tracking-tight mb-0.5 md:mb-1">30</span>
-                  <span className="font-sans text-[10px] xs:text-xs md:text-sm tracking-widest uppercase font-semibold">Days Visa</span>
-                  <span className="text-[8px] xs:text-[10px] opacity-0 group-hover/circle:opacity-100 transition-opacity duration-300 font-light mt-0.5 md:mt-1">Recommended</span>
+                <div className="flex items-center justify-between font-bold text-accent pt-6 border-t border-brand/5 group-hover:text-brand transition-colors">
+                  <span className="eyebrow text-[10px]">Connect to Apply</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
+              </Link>
 
-                {/* Option 3: 90 Days */}
-                <div className="flex flex-col items-center justify-center bg-brand/35 backdrop-blur-md border border-white/20 rounded-full w-28 h-28 xs:w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 text-center cursor-pointer transition-all hover:scale-105 hover:bg-accent hover:border-accent hover:text-brand text-white shadow-[0_0_20px_rgba(255,255,255,0.05)] group/circle">
-                  <span className="font-serif text-2xl xs:text-3xl md:text-4xl font-bold tracking-tight mb-0.5 md:mb-1">90</span>
-                  <span className="font-sans text-[10px] xs:text-xs md:text-sm tracking-widest uppercase font-semibold">Days Visa</span>
-                  <span className="text-[8px] xs:text-[10px] opacity-0 group-hover/circle:opacity-100 transition-opacity duration-300 font-light mt-0.5 md:mt-1">Extended Stay</span>
+              {/* Option 2: 30 Days (Recommended) */}
+              <Link
+                to="/contact"
+                className="group relative flex flex-col justify-between bg-brand text-canvas p-8 rounded-2xl shadow-[0_12px_40px_rgba(23,42,81,0.12)] transition-all duration-300 hover:shadow-[0_24px_50px_rgba(23,42,81,0.22)] hover:-translate-y-1 border border-accent/30"
+              >
+                {/* Popular Badge */}
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-accent text-white text-[9px] tracking-[0.2em] uppercase font-bold py-1 px-4 rounded-full shadow-md">
+                  Most Popular
                 </div>
+                <div>
+                  <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-canvas/40">Standard Leisure</span>
+                  <div className="flex items-baseline gap-2 mt-4 mb-6">
+                    <span className="font-serif text-5xl md:text-6xl font-bold text-canvas leading-none">30</span>
+                    <span className="text-xs text-canvas/60 font-light uppercase tracking-wider font-sans">Days Visa</span>
+                  </div>
+                  <div className="h-[1px] w-full bg-canvas/10 my-6" />
+                  <ul className="space-y-4 text-sm font-light text-canvas/80 mb-8">
+                    <li className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+                      <span>Best for Family &amp; Tourism</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent/40 shrink-0" />
+                      <span>Single Entry Tourist Permit</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent/40 shrink-0" />
+                      <span>Premium Concierge Review</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex items-center justify-between font-bold text-accent pt-6 border-t border-canvas/10 group-hover:text-canvas transition-colors">
+                  <span className="eyebrow text-[10px] text-canvas">Connect to Apply</span>
+                  <ArrowRight className="w-4 h-4 text-canvas group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
 
-              </div>
+              {/* Option 3: 90 Days */}
+              <Link
+                to="/contact"
+                className="group relative flex flex-col justify-between bg-white border border-brand/10 p-8 rounded-2xl shadow-[0_4px_24px_rgba(23,42,81,0.02)] transition-all duration-300 hover:shadow-[0_16px_40px_rgba(23,42,81,0.06)] hover:-translate-y-1 hover:border-accent/40"
+              >
+                <div>
+                  <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-brand/40">Extended Stay</span>
+                  <div className="flex items-baseline gap-2 mt-4 mb-6">
+                    <span className="font-serif text-5xl md:text-6xl font-bold text-brand leading-none">90</span>
+                    <span className="text-xs text-brand/50 font-light uppercase tracking-wider font-sans">Days Visa</span>
+                  </div>
+                  <div className="h-[1px] w-full bg-brand/5 my-6" />
+                  <ul className="space-y-4 text-sm font-light text-brand/75 mb-8">
+                    <li className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                      <span>Extended Stays &amp; Visits</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent/45 shrink-0" />
+                      <span>Priority Concierge Check</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent/45 shrink-0" />
+                      <span>Expedited Embassy Routing</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex items-center justify-between font-bold text-accent pt-6 border-t border-brand/5 group-hover:text-brand transition-colors">
+                  <span className="eyebrow text-[10px]">Connect to Apply</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+
             </div>
           </div>
         </section>
@@ -127,8 +202,8 @@ function Visas() {
               <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="bg-accent/10 p-3 text-accent">
-                      <FileText className="w-6 h-6" />
+                    <div className="bg-accent/10 p-3 text-accent rounded-lg">
+                      <FaFileAlt className="w-5 h-5" />
                     </div>
                     <span className="font-serif text-xs text-brand/100 tracking-wider">01 / Required Files</span>
                   </div>
@@ -150,8 +225,8 @@ function Visas() {
               <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="bg-accent/10 p-3 text-accent">
-                      <Users className="w-6 h-6" />
+                    <div className="bg-accent/10 p-3 text-accent rounded-lg">
+                      <FaUsers className="w-5 h-5" />
                     </div>
                     <span className="font-serif text-xs text-brand/100 tracking-wider">02 / Entry Policies</span>
                   </div>
@@ -177,8 +252,8 @@ function Visas() {
               <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="bg-accent/10 p-3 text-accent">
-                      <Eye className="w-6 h-6" />
+                    <div className="bg-accent/10 p-3 text-accent rounded-lg">
+                      <FaEye className="w-5 h-5" />
                     </div>
                     <span className="font-serif text-xs text-brand/100 tracking-wider">03 / Border Security</span>
                   </div>
@@ -204,8 +279,8 @@ function Visas() {
               <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between lg:col-span-1 lg:col-start-1">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="bg-accent/10 p-3 text-accent">
-                      <BadgeAlert className="w-6 h-6" />
+                    <div className="bg-accent/10 p-3 text-accent rounded-lg">
+                      <FaExclamationTriangle className="w-5 h-5" />
                     </div>
                     <span className="font-serif text-xs text-brand/100 tracking-wider">04 / Guarantor Rules</span>
                   </div>
@@ -238,8 +313,8 @@ function Visas() {
               <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between lg:col-span-2">
                 <div>
                   <div className="mb-6 flex items-center justify-between">
-                    <div className="bg-accent/10 p-3 text-accent">
-                      <Info className="w-6 h-6" />
+                    <div className="bg-accent/10 p-3 text-accent rounded-lg">
+                      <FaInfoCircle className="w-5 h-5" />
                     </div>
                     <span className="font-serif text-xs text-brand/100 tracking-wider">05 / Terms & Conditions</span>
                   </div>
@@ -277,87 +352,7 @@ function Visas() {
           </div>
         </section>
 
-        <section className="bg-canvas py-32 px-6 md:px-10 border-b border-brand/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-8">
-              <div className="max-w-2xl">
-                <span className="eyebrow text-accent block mb-5">Global Entry</span>
-                <h2 className="font-serif text-5xl md:text-7xl leading-[0.95]">
-                  Popular Global <br /><span className="italic">Visa Services</span>
-                </h2>
-              </div>
-              <p className="text-brand/100 text-sm max-w-xs font-light">
-                Secure your tourist or visitor visa with our rapid concierge processing and unmatched document coordination.
-              </p>
-            </div>            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-              {homeData.popularVisas.map((v) => {
-                // Ensure all headings follow standard "[Country] Visa From Dubai"
-                let cleanCountry = v.country;
-                if (cleanCountry.toLowerCase().endsWith("visa")) {
-                  cleanCountry = cleanCountry.substring(0, cleanCountry.toLowerCase().lastIndexOf("visa")).trim();
-                }
-                const displayHeading = `${cleanCountry} Visa From Dubai`;
 
-                return (
-                  <Link
-                    to="/contact"
-                    key={v.id}
-                    className="group flex flex-col bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1"
-                  >
-                    {/* Top flag image with overlay gradient and capsule badge */}
-                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-50 border-b border-gray-100">
-                      <img
-                        src={`https://flagcdn.com/w640/${v.countryCode.toLowerCase()}.png`}
-                        alt={`${v.country} flag`}
-                        loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-
-                      {/* Overlay capsule - Displays processing timeline */}
-                      <div className="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 bg-white px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl flex flex-col shadow-sm">
-                        <span className="text-[7px] sm:text-[8px] font-sans tracking-widest text-gray-400 font-bold uppercase leading-none mb-0.5">
-                          {v.badge || "FAST TRACK"}
-                        </span>
-                        <span className="text-[9px] sm:text-[10px] font-sans text-sky-600 font-bold leading-none">
-                          {v.processingTime}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Card Body */}
-                    <div className="p-4 sm:p-6 flex flex-col flex-grow justify-between">
-                      <div>
-                        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1.5 sm:gap-2 mb-2">
-                          <h3 className="font-sans text-sm sm:text-base font-bold text-gray-900 tracking-tight leading-tight group-hover:text-accent transition-colors">
-                            {displayHeading}
-                          </h3>
-                          <span className="bg-sky-50 text-sky-500 text-[8px] sm:text-[9px] font-sans font-bold tracking-wider px-1.5 py-0.5 rounded-md self-start shrink-0">
-                            VISA
-                          </span>
-                        </div>
-
-                        {/* Timeline bullet - Get in [processingTime] */}
-                        <div className="flex items-center gap-1.5 text-[10px] sm:text-xs text-gray-500 font-light mt-2 sm:mt-2.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
-                          <span>Get in {v.processingTime}</span>
-                        </div>
-                      </div>
-
-                      {/* Bottom Price: starting price tag */}
-                      <div className="flex flex-wrap items-baseline gap-1 sm:gap-2 mt-4 sm:mt-5 pt-3 sm:pt-4 border-t border-gray-100/60">
-                        <span className="text-base sm:text-xl font-bold text-gray-900 font-sans">{v.price}</span>
-                        <span className="text-[8px] sm:text-[9px] font-sans tracking-widest text-gray-400 font-bold uppercase">
-                          STARTING PRICE
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </section>
 
         {/* Premium entry services: ALSO WE PROVIDE */}
         <section className="py-32 px-6 md:px-10">
@@ -465,11 +460,11 @@ function Visas() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <a href="tel:+971504190737" className="flex items-center gap-3 bg-brand/5 border border-brand/10 hover:border-accent/40 px-6 py-4 transition-colors">
-                <span className="bg-accent/15 p-2 rounded-full text-accent"><PhoneCall className="w-4 h-4" /></span>
+                <span className="bg-accent/15 p-2 rounded-full text-accent"><FaPhoneAlt className="w-4 h-4" /></span>
                 <span className="text-sm font-medium text-brand">+971 50 419 0737</span>
               </a>
               <a href="tel:+971586490737" className="flex items-center gap-3 bg-brand/5 border border-brand/10 hover:border-accent/40 px-6 py-4 transition-colors">
-                <span className="bg-accent/15 p-2 rounded-full text-accent"><PhoneCall className="w-4 h-4" /></span>
+                <span className="bg-accent/15 p-2 rounded-full text-accent"><FaPhoneAlt className="w-4 h-4" /></span>
                 <span className="text-sm font-medium text-brand">+971 58 649 0737</span>
               </a>
             </div>

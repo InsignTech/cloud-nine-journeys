@@ -10,6 +10,7 @@ import {
 
 import appCss from "../styles.css?url";
 import { ScrollToTopButton } from "../components/ScrollToTopButton";
+import { WhatsAppButton } from "../components/WhatsAppButton";
 import logo from "../assets/logo.png";
 
 function NotFoundComponent() {
@@ -125,6 +126,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <Outlet />
       <ScrollToTopButton />
+      <WhatsAppButton />
     </QueryClientProvider>
   );
 }

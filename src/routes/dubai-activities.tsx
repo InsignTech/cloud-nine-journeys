@@ -22,12 +22,12 @@ export const Route = createFileRoute("/dubai-activities")({
 });
 
 const items = [
-  { title: "Celestial Desert Safari", tag: "Half-day / Private", price: "From AED 2,400", img: desert, alt: "Hot air balloons over dunes" },
-  { title: "Skyline Gastronomy", tag: "Evening / Reservation", price: "From AED 1,800", img: skyline, alt: "Dubai skyline at dusk" },
-  { title: "Private Marina Voyage", tag: "Half/Full Day Charter", price: "From AED 8,500", img: yacht, alt: "Yacht deck" },
-  { title: "Architectural Walks", tag: "Half-day / Curated", price: "From AED 1,200", img: marina, alt: "Dubai Marina from above" },
-  { title: "Falconry & Heritage", tag: "Cultural Immersion", price: "From AED 1,600", img: falcon, alt: "Falconry experience" },
-  { title: "Helicopter Skyline Tour", tag: "30 min / Private", price: "From AED 4,200", img: chopper, alt: "Helicopter tour" },
+  { title: "Celestial Desert Safari", tag: "Half-day / Private", img: desert, alt: "Hot air balloons over dunes" },
+  { title: "Dubai City Tours", tag: "Evening / Guided Tour", img: skyline, alt: "Dubai landmarks tour" },
+  { title: "Private Marina Voyage", tag: "Half/Full Day Charter", img: yacht, alt: "Yacht deck" },
+  { title: "Architectural Walks", tag: "Half-day / Curated", img: marina, alt: "Dubai Marina from above" },
+  { title: "Falconry & Heritage", tag: "Cultural Immersion", img: falcon, alt: "Falconry experience" },
+  { title: "Helicopter Skyline Tour", tag: "30 min / Private", img: chopper, alt: "Helicopter tour" },
 ];
 
 function DubaiActivities() {
@@ -55,7 +55,6 @@ function DubaiActivities() {
                     <h3 className="font-serif text-3xl italic">{it.title}</h3>
                     <p className="eyebrow text-brand/50 mt-2">{it.tag}</p>
                   </div>
-                  <span className="eyebrow text-accent whitespace-nowrap">{it.price}</span>
                 </div>
               </article>
             ))}
