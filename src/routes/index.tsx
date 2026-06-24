@@ -11,6 +11,10 @@ import passport from "@/assets/passport.jpg";
 import georgiaTour from "@/assets/georgia-tour.jpg";
 import sriLankaTour from "@/assets/sri-lanka-tour.jpg";
 import thailandTour from "@/assets/thailand-tour.jpg";
+import dubaiTour from "@/assets/dubai-tour.jpg";
+import abuDhabiTour from "@/assets/abu-dhabi-tour.jpg";
+import rakTour from "@/assets/rak-tour.jpg";
+import alAinTour from "@/assets/al-ain-tour.jpg";
 
 // Import Go Kite static data
 import homeData from "@/data/cloudlife-data.json";
@@ -42,6 +46,65 @@ const activities = [
   { title: "Celestial Desert Safaris", tag: "Activities / Private Tour", img: desertDawn, alt: "Hot air balloons over Arabian dunes at dawn" },
   { title: "Dubai City Tours", tag: "Activities / Guided Tour", img: skyline, alt: "Tourists visiting iconic Dubai landmarks like Museum of the Future", offset: true },
   { title: "Downtown Dubai", tag: "Sightseeing / Iconic", img: downtownDubai, alt: "Burj Khalifa and Dubai Fountain at twilight" },
+];
+
+const tourPackages = [
+  {
+    id: "dubai-tour",
+    title: "Dubai Tour",
+    destination: "Dubai, UAE",
+    duration: "Customizable Itinerary",
+    tag: "City Scenic / Luxury",
+    img: dubaiTour,
+    inclusions: [
+      "Burj Khalifa & Downtown",
+      "Dubai Marina Yacht Cruise",
+      "Traditional Souks & Creek Tour",
+      "Chauffeur Service Included"
+    ]
+  },
+  {
+    id: "abu-dhabi-tour",
+    title: "Abu Dhabi Tour",
+    destination: "Abu Dhabi, UAE",
+    duration: "Customizable Itinerary",
+    tag: "Culture / Sightseeing",
+    img: abuDhabiTour,
+    inclusions: [
+      "Sheikh Zayed Grand Mosque",
+      "Louvre Abu Dhabi Museum",
+      "Emirates Palace Guided Visit",
+      "Yas Island Photo Stops"
+    ]
+  },
+  {
+    id: "rak-tour",
+    title: "Ras Al Khaimah Tour",
+    destination: "Ras Al Khaimah, UAE",
+    duration: "Customizable Itinerary",
+    tag: "Adventure / Resort",
+    img: rakTour,
+    inclusions: [
+      "Jebel Jais Mountain Road Drive",
+      "High Altitude Adventure Parks",
+      "Luxury Beachfront Resort Access",
+      "Desert Dunes Photo Session"
+    ]
+  },
+  {
+    id: "al-ain-tour",
+    title: "Al Ain Tour",
+    destination: "Al Ain, UAE",
+    duration: "Customizable Itinerary",
+    tag: "Heritage / Oasis",
+    img: alAinTour,
+    inclusions: [
+      "Al Jahili Mudbrick Fort",
+      "UNESCO Al Ain Oasis Walk",
+      "Jebel Hafeet Mountain Drive",
+      "Traditional Camel Market Visit"
+    ]
+  }
 ];
 
 const destinations = [
@@ -167,71 +230,61 @@ function Index() {
               <div className="max-w-2xl">
                 <span className="eyebrow text-accent block mb-5">Trending Escapes</span>
                 <h2 className="font-serif text-5xl md:text-6xl mb-6 leading-[0.95]">
-                  Holiday Packages <br />
+                  Tour Packages <br />
                 </h2>
               </div>
-              {/* <p className="text-white/60 text-sm max-w-xs font-light">
-                Handpicked global journeys combining luxury flights, bespoke tours, and boutique lodging.
-              </p> */}
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {[...homeData.trendingHolidays] // create copy to avoid mutating original
-                .sort(() => Math.random() - 0.5)
-                .slice(0, 4)
-                .map((h) => (
-                  <article
-                    key={h.id}
-                    className="group flex flex-col md:flex-row bg-white/5 border border-white/10 rounded-sm overflow-hidden transition-all duration-300 hover:border-accent/40"
-                  >
-                    <div className="relative md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
-                      <img
-                        src={getAssetUrl(h.imageName)}
-                        alt={h.title}
-                        loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute top-4 left-4 bg-accent text-brand text-[9px] uppercase tracking-widest font-bold px-3 py-1 rounded-sm">
-                        {h.tag}
+              {tourPackages.map((h) => (
+                <article
+                  key={h.id}
+                  className="group flex flex-col md:flex-row bg-white/5 border border-white/10 rounded-sm overflow-hidden transition-all duration-300 hover:border-accent/40"
+                >
+                  <div className="relative md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
+                    <img
+                      src={h.img}
+                      alt={h.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute top-4 left-4 bg-accent text-brand text-[9px] uppercase tracking-widest font-bold px-3 py-1 rounded-sm">
+                      {h.tag}
+                    </div>
+                  </div>
+
+                  <div className="md:w-1/2 p-8 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center gap-1.5 text-accent eyebrow mb-3 text-[10px]">
+                        <Plane className="w-3.5 h-3.5" />
+                        <span>{h.destination}</span>
+                      </div>
+                      <h3 className="font-serif text-2xl italic mb-3 leading-tight text-white">{h.title}</h3>
+                      <p className="text-white/40 text-[11px] tracking-widest uppercase font-sans font-light mb-6">
+                        {h.duration}
+                      </p>
+
+                      <div className="space-y-2 mb-8">
+                        {h.inclusions.map((inc, i) => (
+                          <div key={i} className="flex items-center gap-2 text-[12px] text-white/70 font-sans font-light">
+                            <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0" />
+                            <span>{inc}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
 
-                    <div className="md:w-1/2 p-8 flex flex-col justify-between">
-                      <div>
-                        <div className="flex items-center gap-1.5 text-accent eyebrow mb-3 text-[10px]">
-                          <Plane className="w-3.5 h-3.5" />
-                          <span>{h.destination}</span>
-                        </div>
-                        <h3 className="font-serif text-2xl italic mb-3 leading-tight text-white">{h.title}</h3>
-                        <p className="text-white/40 text-[11px] tracking-widest uppercase font-sans font-light mb-6">
-                          {h.duration}
-                        </p>
-
-                        <div className="space-y-2 mb-8">
-                          {h.inclusions.map((inc, i) => (
-                            <div key={i} className="flex items-center gap-2 text-[12px] text-white/70 font-sans font-light">
-                              <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0" />
-                              <span>{inc}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="border-t border-white/10 pt-6 flex justify-between items-center mt-auto">
-                        <div>
-                          <div className="text-[9px] eyebrow text-white/40 mb-1">Starting From</div>
-                          <div className="font-serif text-2xl italic text-accent">{h.price}</div>
-                        </div>
-                        <Link
-                          to="/contact"
-                          className="bg-accent text-brand px-6 py-3.5 text-[9px] uppercase tracking-wider font-bold hover:bg-white hover:text-brand transition-colors"
-                        >
-                          Enquire
-                        </Link>
-                      </div>
+                    <div className="border-t border-white/10 pt-6 flex justify-end items-center mt-auto">
+                      <Link
+                        to="/contact"
+                        className="bg-accent text-brand px-6 py-3.5 text-[9px] uppercase tracking-wider font-bold hover:bg-white hover:text-brand transition-colors"
+                      >
+                        Enquire
+                      </Link>
                     </div>
-                  </article>
-                ))}
+                  </div>
+                </article>
+              ))}
             </div>
 
             <div className="mt-16 text-center">
