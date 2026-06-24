@@ -13,15 +13,15 @@ import borderVisaChange from "@/assets/border-visa-change.png";
 import homeData from "@/data/cloudlife-data.json";
 
 
-import { 
-  FileText, 
-  ShieldCheck, 
-  Info, 
-  BadgeAlert, 
-  Eye, 
-  Users, 
+import {
+  FileText,
+  ShieldCheck,
+  Info,
+  BadgeAlert,
+  Eye,
+  Users,
   ArrowRight,
-  PhoneCall 
+  PhoneCall
 } from "lucide-react";
 
 export const Route = createFileRoute("/visas")({
@@ -77,15 +77,15 @@ function Visas() {
             {/* Premium Interactive Backdrop Container */}
             <div className="relative h-[480px] xs:h-[540px] sm:h-auto sm:aspect-[16/9] w-full overflow-hidden border border-brand/10 shadow-2xl group">
               {/* Background Image */}
-              <img 
-                src={dubaiVisaHero} 
-                alt="Dubai Skyline and modern flyovers" 
+              <img
+                src={dubaiVisaHero}
+                alt="Dubai Skyline and modern flyovers"
                 className="w-full h-full object-cover grayscale-[20%] group-hover:scale-102 transition-transform duration-700 brightness-[0.65]"
               />
 
               {/* Overlay Glassmorphic Options */}
               <div className="absolute inset-0 flex flex-col sm:flex-row items-center justify-around p-6 gap-4 sm:gap-4 select-none">
-                
+
                 {/* Option 1: 14 Days */}
                 <div className="flex flex-col items-center justify-center bg-brand/35 backdrop-blur-md border border-white/20 rounded-full w-28 h-28 xs:w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 text-center cursor-pointer transition-all hover:scale-105 hover:bg-accent hover:border-accent hover:text-brand text-white shadow-[0_0_20px_rgba(255,255,255,0.05)] group/circle">
                   <span className="font-serif text-2xl xs:text-3xl md:text-4xl font-bold tracking-tight mb-0.5 md:mb-1">14</span>
@@ -122,7 +122,7 @@ function Visas() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              
+
               {/* Card 1: Visitor's Documents */}
               <div className="bg-white border border-brand/10 shadow-[0_4px_24px_rgba(33,30,50,0.02)] p-8 rounded-none transition-all hover:border-accent/40 flex flex-col justify-between">
                 <div>
@@ -277,7 +277,7 @@ function Visas() {
           </div>
         </section>
 
- <section className="bg-canvas py-32 px-6 md:px-10 border-b border-brand/5">
+        <section className="bg-canvas py-32 px-6 md:px-10 border-b border-brand/5">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-8">
               <div className="max-w-2xl">
@@ -313,7 +313,7 @@ function Visas() {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                      
+
                       {/* Overlay capsule - Displays processing timeline */}
                       <div className="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 bg-white px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl flex flex-col shadow-sm">
                         <span className="text-[7px] sm:text-[8px] font-sans tracking-widest text-gray-400 font-bold uppercase leading-none mb-0.5">
@@ -336,7 +336,7 @@ function Visas() {
                             VISA
                           </span>
                         </div>
-                        
+
                         {/* Timeline bullet - Get in [processingTime] */}
                         <div className="flex items-center gap-1.5 text-[10px] sm:text-xs text-gray-500 font-light mt-2 sm:mt-2.5">
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
@@ -369,14 +369,14 @@ function Visas() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              
+
               {/* Card 1: Multiple Entry Visa */}
               <div className="bg-canvas border border-brand/5 overflow-hidden flex flex-col justify-between group hover:border-accent/20 transition-all">
                 <div>
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={multipleEntryVisa} 
-                      alt="Luxury airport business lounge" 
+                    <img
+                      src={multipleEntryVisa}
+                      alt="Luxury airport business lounge"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -397,9 +397,9 @@ function Visas() {
               <div className="bg-canvas border border-brand/5 overflow-hidden flex flex-col justify-between group hover:border-accent/20 transition-all">
                 <div>
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={airportVisaChange} 
-                      alt="Modern passport immigration check" 
+                    <img
+                      src={airportVisaChange}
+                      alt="Modern passport immigration check"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -420,9 +420,9 @@ function Visas() {
               <div className="bg-canvas border border-brand/5 overflow-hidden flex flex-col justify-between group hover:border-accent/20 transition-all">
                 <div>
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={borderVisaChange} 
-                      alt="Luxury car driving through desert during sunrise" 
+                    <img
+                      src={borderVisaChange}
+                      alt="Luxury car driving through desert during sunrise"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -462,7 +462,7 @@ function Visas() {
             <p className="text-brand/60 max-w-xl mx-auto text-base font-light mb-12">
               Speak directly with our expert team to secure the absolute best offers, special pricing, and expedited turnaround times for your UAE tourist or business visa.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <a href="tel:+971504190737" className="flex items-center gap-3 bg-brand/5 border border-brand/10 hover:border-accent/40 px-6 py-4 transition-colors">
                 <span className="bg-accent/15 p-2 rounded-full text-accent"><PhoneCall className="w-4 h-4" /></span>
