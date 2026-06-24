@@ -119,8 +119,10 @@ function Index() {
       <SiteNav overlay />
       <main>
         <section className="relative h-screen flex flex-col justify-end pb-24 px-6 md:px-10 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <img src={dubai1} alt="Aerial view of Dubai Marina at sunset with luxury yachts" className="w-full h-full object-cover kenburns" width={1920} height={1080} />
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <div className="w-full h-[120%] -translate-y-[12%] md:h-full md:translate-y-0">
+              <img src={dubai1} alt="Aerial view of Dubai Marina at sunset with luxury yachts" className="w-full h-full object-cover kenburns" width={1920} height={1080} />
+            </div>
             <div className="absolute inset-0 bg-gradient-to-t from-brand/70 via-brand/10 to-brand/40" />
           </div>
           <div className="relative z-10 max-w-5xl">
@@ -235,7 +237,7 @@ function Index() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               {tourPackages.map((h) => (
                 <article
                   key={h.id}
