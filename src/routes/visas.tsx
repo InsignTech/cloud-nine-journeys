@@ -205,9 +205,9 @@ function Visas() {
                     <div className="bg-accent/10 p-3 text-accent rounded-lg">
                       <FaFileAlt className="w-5 h-5" />
                     </div>
-                    <span className="font-serif text-xs text-brand/100 tracking-wider">01 / Required Files</span>
+                    <span className="text-xs text-brand/100 tracking-wider">01 / Required Files</span>
                   </div>
-                  <h3 className="font-serif text-2xl mb-4 text-brand">Visitor's Documents</h3>
+                  <h3 className="text-2xl mb-4 text-brand">Visitor's Documents</h3>
                   <ul className="text-sm font-light text-brand/85 space-y-4">
                     <li className="flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
@@ -228,9 +228,9 @@ function Visas() {
                     <div className="bg-accent/10 p-3 text-accent rounded-lg">
                       <FaUsers className="w-5 h-5" />
                     </div>
-                    <span className="font-serif text-xs text-brand/100 tracking-wider">02 / Entry Policies</span>
+                    <span className="text-xs text-brand/100 tracking-wider">02 / Entry Policies</span>
                   </div>
-                  <h3 className="font-serif text-2xl mb-4 text-brand">General Rules</h3>
+                  <h3 className="text-2xl mb-4 text-brand">General Rules</h3>
                   <ul className="text-sm font-light text-brand/85 space-y-4">
                     <li className="flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
@@ -255,9 +255,9 @@ function Visas() {
                     <div className="bg-accent/10 p-3 text-accent rounded-lg">
                       <FaEye className="w-5 h-5" />
                     </div>
-                    <span className="font-serif text-xs text-brand/100 tracking-wider">03 / Border Security</span>
+                    <span className="text-xs text-brand/100 tracking-wider">03 / Border Security</span>
                   </div>
-                  <h3 className="font-serif text-2xl mb-4 text-brand">Immigration Procedures</h3>
+                  <h3 className="text-2xl mb-4 text-brand">Immigration Procedures</h3>
                   <ul className="text-sm font-light text-brand/85 space-y-4">
                     <li className="flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
@@ -282,9 +282,9 @@ function Visas() {
                     <div className="bg-accent/10 p-3 text-accent rounded-lg">
                       <FaExclamationTriangle className="w-5 h-5" />
                     </div>
-                    <span className="font-serif text-xs text-brand/100 tracking-wider">04 / Guarantor Rules</span>
+                    <span className="text-xs text-brand/100 tracking-wider">04 / Guarantor Rules</span>
                   </div>
-                  <h3 className="font-serif text-2xl mb-4 text-brand">UAE Guarantor & ID</h3>
+                  <h3 className="text-2xl mb-4 text-brand">UAE Guarantor & ID</h3>
                   <p className="text-xs font-light text-brand/85 mb-4">
                     Additional identity documents are mandatory for visitors of the following nationalities:
                   </p>
@@ -316,9 +316,9 @@ function Visas() {
                     <div className="bg-accent/10 p-3 text-accent rounded-lg">
                       <FaInfoCircle className="w-5 h-5" />
                     </div>
-                    <span className="font-serif text-xs text-brand/100 tracking-wider">05 / Terms & Conditions</span>
+                    <span className="text-xs text-brand/100 tracking-wider">05 / Terms & Conditions</span>
                   </div>
-                  <h3 className="font-serif text-2xl mb-4 text-brand">Terms & Conditions</h3>
+                  <h3 className="text-2xl mb-4 text-brand">Terms & Conditions</h3>
                   <div className="grid md:grid-cols-2 gap-6 text-sm font-light text-brand/85">
                     <ul className="space-y-4">
                       <li className="flex items-start gap-2.5">
@@ -376,7 +376,7 @@ function Visas() {
                     />
                   </div>
                   <div className="p-8">
-                    <h3 className="font-serif text-2xl mb-3">Multiple Entry Visa</h3>
+                    <h3 className="text-2xl mb-3">Multiple Entry Visa</h3>
                     <p className="text-sm font-light text-brand/70 leading-relaxed">
                       Designed for frequent business executives and leisure travelers. Allows highly flexible, seamless and continuous movement in and out of the UAE.
                     </p>
@@ -399,7 +399,7 @@ function Visas() {
                     />
                   </div>
                   <div className="p-8">
-                    <h3 className="font-serif text-2xl mb-3">Airport Visa Change</h3>
+                    <h3 className="text-2xl mb-3">Airport Visa Change</h3>
                     <p className="text-sm font-light text-brand/70 leading-relaxed">
                       Extend or change your UAE tourist visa instantly directly at the airport terminal. Fast, stress-free transfers without returning to your home country.
                     </p>
@@ -422,7 +422,7 @@ function Visas() {
                     />
                   </div>
                   <div className="p-8">
-                    <h3 className="font-serif text-2xl mb-3">Border to Border Change</h3>
+                    <h3 className="text-2xl mb-3">Border to Border Change</h3>
                     <p className="text-sm font-light text-brand/70 leading-relaxed">
                       Economical visa change options via comfortable regional transfers. Full logistics, documentation, and boundary crossing assistance provided.
                     </p>

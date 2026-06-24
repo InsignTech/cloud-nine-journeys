@@ -75,10 +75,15 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
-  h1, h2, h3, h4 {
+  h1, h2 {
     font-family: var(--font-serif);
     font-weight: 400;
     letter-spacing: -0.01em;
+  }
+  h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: -0.015em;
   }
   ::selection {
     background: oklch(0.72 0.09 75 / 0.3);

@@ -120,7 +120,7 @@ function OtherServices() {
 
                     {/* Number + Tag row */}
                     <div className="flex items-center justify-between">
-                      <span className="font-serif text-sm text-accent/70 tracking-[0.35em] uppercase">
+                      <span className="text-sm text-accent/70 tracking-[0.35em] uppercase">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <span className="text-[10px] font-semibold tracking-[0.35em] uppercase bg-brand/5 text-brand/60 px-3 py-1 rounded-full">
@@ -135,7 +135,7 @@ function OtherServices() {
 
                     {/* Title & Description */}
                     <div className="flex flex-col flex-grow gap-4">
-                      <h3 className="font-serif text-2xl leading-tight text-brand group-hover:text-accent transition-colors duration-300">
+                      <h3 className="text-2xl leading-tight text-brand group-hover:text-accent transition-colors duration-300">
                         {s.title}
                       </h3>
                       <p className="text-sm text-brand/70 font-light leading-relaxed flex-grow">
