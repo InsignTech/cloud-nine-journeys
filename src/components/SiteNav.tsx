@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.png";
+import logoMark from "@/assets/logo/logo_mark_cropped.png";
+import logoText from "@/assets/logo/logo_text_cropped.png";
 import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 
 export function SiteNav({ overlay = false }: { overlay?: boolean }) {
@@ -14,7 +15,7 @@ export function SiteNav({ overlay = false }: { overlay?: boolean }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const solid = !overlay || scrolled;
+  const solid = !overlay || scrolled || open;
 
   return (
     <nav
@@ -49,19 +50,19 @@ export function SiteNav({ overlay = false }: { overlay?: boolean }) {
       </div>
 
       <div className="px-6 md:px-12 flex justify-between items-center py-4">
-        <Link to="/" className="flex items-center gap-3 group">
+        <Link to="/" className="flex items-center gap-3.5 group">
           <img
-            src={logo}
-            alt="Cloud Life Travels Logo"
-            className={`h-10 w-10 md:h-12 md:w-12 object-contain transition-all duration-300 ${!solid && "brightness-0 invert"
+            src={logoMark}
+            alt="Cloud Life Travels Logo Mark"
+            className={`h-8.5 md:h-11 w-auto object-contain transition-all duration-300 ${!solid && "brightness-0 invert"
               }`}
           />
-          <div className="flex flex-col leading-none">
-            <span className="font-serif text-xl md:text-2xl font-bold">Cloud Life</span>
-            <span className={`text-[8px] tracking-[0.35em] uppercase mt-0.5 ${solid ? "text-brand/60" : "text-white/70"}`}>
-              Travel Beyond
-            </span>
-          </div>
+          <img
+            src={logoText}
+            alt="Cloud Life Travels Text"
+            className={`h-6.5 md:h-7.5 w-auto object-contain transition-all duration-300 ${!solid && "brightness-0 invert"
+              }`}
+          />
         </Link>
         <div className="hidden lg:flex gap-9 items-center text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold">
           <Link to="/" className="transition-colors hover:text-accent" activeProps={{ className: "text-accent" }}>Home</Link>
