@@ -15,7 +15,11 @@ export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
       { title: "Travel Gallery — Cloud Life Travels" },
-      { name: "description", content: "Explore photos of luxury destinations, desert safaris, private yachts, and custom tours offered by Cloud Life Travels." },
+      {
+        name: "description",
+        content:
+          "Explore photos of luxury destinations, desert safaris, private yachts, and custom tours offered by Cloud Life Travels.",
+      },
     ],
   }),
   component: Gallery,
@@ -39,7 +43,12 @@ function Gallery() {
       <main className="bg-canvas text-brand">
         <PageHero
           eyebrow="Visual Odyssey"
-          title={<>Moments of <br /><span className="not-italic">Inspiration.</span></>}
+          title={
+            <>
+              Moments of <br />
+              <span className="not-italic">Inspiration.</span>
+            </>
+          }
           subtitle="A handpicked curation of destinations, luxury experiences, and beautiful travel backdrops."
           image={skyline}
           alt="Burj Khalifa Skyline"
@@ -55,7 +64,10 @@ function Gallery() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
               {images.map((img, i) => (
-                <div key={i} className="group relative overflow-hidden aspect-[4/5] bg-brand/5 border border-brand/10 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.02)] cursor-pointer">
+                <div
+                  key={i}
+                  className="group relative overflow-hidden aspect-[4/5] bg-brand/5 border border-brand/10 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.02)] cursor-pointer"
+                >
                   <img
                     src={img.src}
                     alt={img.title}
@@ -63,10 +75,14 @@ function Gallery() {
                     className="w-full h-full object-cover transition-transform duration-750 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand/90 via-brand/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
-                  
+
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col">
-                    <span className="text-[8px] tracking-[0.2em] uppercase text-accent font-bold mb-1.5">{img.category}</span>
-                    <h3 className="font-serif text-lg md:text-xl italic leading-tight">{img.title}</h3>
+                    <span className="text-[8px] tracking-[0.2em] uppercase text-accent font-bold mb-1.5">
+                      {img.category}
+                    </span>
+                    <h3 className="font-serif text-lg md:text-xl italic leading-tight">
+                      {img.title}
+                    </h3>
                   </div>
                 </div>
               ))}

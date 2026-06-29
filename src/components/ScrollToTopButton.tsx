@@ -1,29 +1,30 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { ChevronUp } from 'lucide-react';
+import { useEffect, useState } from "react";
+import { ChevronUp } from "lucide-react";
 
 export function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (typeof window !== 'undefined') {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+    if (typeof window !== "undefined") {
+      const scrollTop =
+        window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
       setIsVisible(scrollTop > 200);
     }
   };
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
-    window.addEventListener('scroll', toggleVisibility);
-    document.addEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
+    document.addEventListener("scroll", toggleVisibility);
     // Check immediately in case they are already scrolled down on refresh
     toggleVisibility();
 
     return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-      document.removeEventListener('scroll', toggleVisibility);
+      window.removeEventListener("scroll", toggleVisibility);
+      document.removeEventListener("scroll", toggleVisibility);
     };
   }, []);
 
@@ -45,10 +46,10 @@ export function ScrollToTopButton() {
   );
 
   function scrollToTop() {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   }

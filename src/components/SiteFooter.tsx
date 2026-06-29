@@ -7,39 +7,71 @@ export function SiteFooter() {
     <footer className="pt-32 pb-12 px-6 md:px-10 border-t border-brand/10 bg-canvas">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20 max-w-7xl mx-auto">
         <div>
-          <div className="flex items-center gap-3.5 mb-6">
+          <div className="flex items-center gap-2 mb-6">
             <img
               src={logoMark}
               alt="Cloud Life Travels Logo Mark"
-              className="h-12 w-auto object-contain"
+              className="h-[52px] w-auto object-contain"
             />
             <img
               src={logoText}
               alt="Cloud Life Travels Text"
-              className="h-8 w-auto object-contain"
+              className="h-[36px] w-auto object-contain"
             />
           </div>
           <p className="text-xs text-brand/60 leading-relaxed max-w-xs">
-            Defining the pinnacle of travel experiences in the UAE and beyond.
-            Crafted itineraries for the discerning few.
+            Defining the pinnacle of travel experiences in the UAE and beyond. Crafted itineraries
+            for the discerning few.
           </p>
         </div>
         <div>
           <h5 className="eyebrow mb-6">Exploration</h5>
           <ul className="text-sm space-y-4 text-brand/70 font-light">
-            <li><Link to="/dubai-activities" className="hover:text-accent">Dubai Activities</Link></li>
-            <li><Link to="/tour-packages" className="hover:text-accent">Tour Packages</Link></li>
-            <li><Link to="/visas" className="hover:text-accent">Global Visas</Link></li>
-            <li><Link to="/other-services" className="hover:text-accent">Concierge</Link></li>
+            <li>
+              <Link to="/dubai-activities" className="hover:text-accent">
+                Dubai Activities
+              </Link>
+            </li>
+            <li>
+              <Link to="/tour-packages" className="hover:text-accent">
+                Tour Packages
+              </Link>
+            </li>
+            <li>
+              <Link to="/visas" className="hover:text-accent">
+                Global Visas
+              </Link>
+            </li>
+            <li>
+              <Link to="/other-services" className="hover:text-accent">
+                Concierge
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
           <h5 className="eyebrow mb-6">Agency</h5>
           <ul className="text-sm space-y-4 text-brand/70 font-light">
-            <li><Link to="/about" className="hover:text-accent">About Us</Link></li>
-            <li><Link to="/contact" className="hover:text-accent">Contact</Link></li>
-            <li><a href="#" className="hover:text-accent">Terms of Service</a></li>
-            <li><a href="#" className="hover:text-accent">Privacy Policy</a></li>
+            <li>
+              <Link to="/about" className="hover:text-accent">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-accent">
+                Contact
+              </Link>
+            </li>
+            <li>
+              <a href="#" className="hover:text-accent">
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-accent">
+                Privacy Policy
+              </a>
+            </li>
           </ul>
         </div>
         <div>
@@ -56,7 +88,10 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
-              <a href="mailto:hello@cloudlifetravels.com" className="hover:text-accent flex items-center gap-2">
+              <a
+                href="mailto:hello@cloudlifetravels.com"
+                className="hover:text-accent flex items-center gap-2"
+              >
                 <span>hello@cloudlifetravels.com</span>
               </a>
             </li>
@@ -71,7 +106,15 @@ export function SiteFooter() {
           Designed for the Exceptional
         </span>
         <span className="text-[10px] uppercase tracking-widest text-brand/40">
-          Built by <a href="https://insigntechsolutions.com/" target="_blank" rel="noopener noreferrer" className="hover:text-accent lowercase">insign tech solutions</a>
+          Built by{" "}
+          <a
+            href="https://insigntechsolutions.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent lowercase"
+          >
+            insign tech solutions
+          </a>
         </span>
       </div>
     </footer>

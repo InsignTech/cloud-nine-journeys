@@ -75,12 +75,16 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
-  h1, h2 {
+  h1,
+  h2 {
     font-family: var(--font-serif);
     font-weight: 400;
     letter-spacing: -0.01em;
   }
-  h3, h4, h5, h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-sans);
     font-weight: 600;
     letter-spacing: -0.015em;
@@ -91,8 +95,12 @@
 }
 
 @layer utilities {
-  .font-serif { font-family: var(--font-serif); }
-  .font-sans { font-family: var(--font-sans); }
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
   .eyebrow {
     font-size: 10px;
     letter-spacing: 0.3em;
@@ -102,19 +110,35 @@
   .reveal {
     animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
-  .reveal-delay-1 { animation-delay: 0.15s; }
-  .reveal-delay-2 { animation-delay: 0.3s; }
-  .reveal-delay-3 { animation-delay: 0.45s; }
+  .reveal-delay-1 {
+    animation-delay: 0.15s;
+  }
+  .reveal-delay-2 {
+    animation-delay: 0.3s;
+  }
+  .reveal-delay-3 {
+    animation-delay: 0.45s;
+  }
 }
 
 @keyframes reveal {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes kenburns {
-  from { transform: scale(1); }
-  to { transform: scale(1.08); }
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
 }
 
 .kenburns {

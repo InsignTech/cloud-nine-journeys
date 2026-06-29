@@ -19,7 +19,11 @@ export const Route = createFileRoute("/other-services")({
   head: () => ({
     meta: [
       { title: "Other Services — Cloud Life Travels" },
-      { name: "description", content: "Private aviation, chauffeur services, event planning, hotel reservations and concierge — a full atelier of travel services." },
+      {
+        name: "description",
+        content:
+          "Private aviation, chauffeur services, event planning, hotel reservations and concierge — a full atelier of travel services.",
+      },
       { property: "og:title", content: "Other Services — Cloud Life Travels" },
       { property: "og:description", content: "Private aviation, chauffeur, events and concierge." },
     ],
@@ -85,7 +89,12 @@ function OtherServices() {
       <main>
         <PageHero
           eyebrow="The Full Atelier"
-          title={<>Everything else, <br /><span className="not-italic">handled.</span></>}
+          title={
+            <>
+              Everything else, <br />
+              <span className="not-italic">handled.</span>
+            </>
+          }
           subtitle="From a last-minute jet to a milestone celebration in Capri — our concierge desk answers within the hour."
           image={georgia}
           alt="Georgia landscape"
@@ -94,14 +103,14 @@ function OtherServices() {
         {/* Services Grid */}
         <section className="py-32 px-6 md:px-10 bg-canvas">
           <div className="max-w-7xl mx-auto">
-
             {/* Section Header */}
             <div className="text-center mb-20">
               <span className="eyebrow text-accent block mb-3">What We Offer</span>
               <h2 className="font-serif text-4xl md:text-5xl mb-4">Our Premium Services</h2>
               <div className="h-0.5 w-16 bg-accent mx-auto mb-6" />
               <p className="text-brand/70 font-light text-sm max-w-xl mx-auto leading-relaxed">
-                Every service is handled with the same standard of care — discreet, precise and entirely on your terms.
+                Every service is handled with the same standard of care — discreet, precise and
+                entirely on your terms.
               </p>
             </div>
 
@@ -152,14 +161,14 @@ function OtherServices() {
                 );
               })}
             </div>
-
           </div>
         </section>
 
         {/* CTA Banner */}
         <section className="bg-brand text-white py-24 px-6 md:px-10 text-center">
           <p className="font-serif italic text-3xl md:text-5xl max-w-3xl mx-auto leading-tight">
-            One brief. One advisor. <br />Everything taken care of.
+            One brief. One advisor. <br />
+            Everything taken care of.
           </p>
           <Link
             to="/contact"

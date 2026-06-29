@@ -76,10 +76,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Cloud Life Travels — Bespoke Luxury Travel & Visas" },
-      { name: "description", content: "Cloud Life Travels crafts bespoke Middle Eastern and global journeys — Dubai experiences, curated tour packages, visa concierge and private services." },
+      {
+        name: "description",
+        content:
+          "Cloud Life Travels crafts bespoke Middle Eastern and global journeys — Dubai experiences, curated tour packages, visa concierge and private services.",
+      },
       { name: "author", content: "Cloud Life Travels" },
       { property: "og:title", content: "Cloud Life Travels — Bespoke Luxury Travel & Visas" },
-      { property: "og:description", content: "Bespoke Dubai experiences, curated tours and visa concierge for the discerning global traveler." },
+      {
+        property: "og:description",
+        content:
+          "Bespoke Dubai experiences, curated tours and visa concierge for the discerning global traveler.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

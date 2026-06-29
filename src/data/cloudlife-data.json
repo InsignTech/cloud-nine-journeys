@@ -6,7 +6,12 @@
       "destination": "Tbilisi & Kazbegi, Georgia",
       "duration": "4 Nights / 5 Days",
       "price": "AED 1,499",
-      "inclusions": ["Flights Included", "4★ Boutique Hotel", "Private Airport Transfers", "Daily Sightseeing Tours"],
+      "inclusions": [
+        "Flights Included",
+        "4★ Boutique Hotel",
+        "Private Airport Transfers",
+        "Daily Sightseeing Tours"
+      ],
       "imageName": "georgia.webp",
       "tag": "Trending / Alpine Meadows"
     },
@@ -16,7 +21,12 @@
       "destination": "Ubud & Kuta, Indonesia",
       "duration": "5 Nights / 6 Days",
       "price": "AED 1,899",
-      "inclusions": ["Flights Included", "Luxury Resort Stay", "Private Tour Guide", "Spa & Beach Dining"],
+      "inclusions": [
+        "Flights Included",
+        "Luxury Resort Stay",
+        "Private Tour Guide",
+        "Spa & Beach Dining"
+      ],
       "imageName": "bali.jpg",
       "tag": "Romantic / Island Paradise"
     },
@@ -26,7 +36,12 @@
       "destination": "Singapore & Kuala Lumpur",
       "duration": "5 Nights / 6 Days",
       "price": "AED 2,999",
-      "inclusions": ["Flights Included", "Premium Hotels", "Inter-city Transfers", "Sentosa Island Entry"],
+      "inclusions": [
+        "Flights Included",
+        "Premium Hotels",
+        "Inter-city Transfers",
+        "Sentosa Island Entry"
+      ],
       "imageName": "singapore-image.jpg",
       "tag": "City Break / Futuristic"
     },
@@ -36,7 +51,12 @@
       "destination": "Zurich, Interlaken & Paris",
       "duration": "6 Nights / 7 Days",
       "price": "AED 4,999",
-      "inclusions": ["Flights Included", "4★ Swiss & Paris Hotels", "Eurail Travel Pass", "Seine River Cruise"],
+      "inclusions": [
+        "Flights Included",
+        "4★ Swiss & Paris Hotels",
+        "Eurail Travel Pass",
+        "Seine River Cruise"
+      ],
       "imageName": "paris2.png",
       "tag": "Luxury / Europe Highlights"
     }

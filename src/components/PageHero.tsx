@@ -10,11 +10,7 @@ export function PageHero({ eyebrow, title, subtitle, image, alt }: PageHeroProps
   return (
     <section className="relative h-[80vh] min-h-[560px] flex items-end pb-20 px-6 md:px-10 overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img
-          src={image}
-          alt={alt}
-          className="w-full h-full object-cover kenburns"
-        />
+        <img src={image} alt={alt} className="w-full h-full object-cover kenburns" />
         {/* Strong bottom-up dark gradient to protect text */}
         <div className="absolute inset-0 bg-gradient-to-t from-brand/95 via-brand/50 to-brand/20" />
         {/* Left-side vignette so text area is always dark enough */}

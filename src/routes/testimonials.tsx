@@ -9,7 +9,11 @@ export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
       { title: "Client Stories & Reviews — Cloud Life Travels" },
-      { name: "description", content: "Read testimonials from travelers who experienced bespoke Middle Eastern journeys, visa concierge, and private travel services." },
+      {
+        name: "description",
+        content:
+          "Read testimonials from travelers who experienced bespoke Middle Eastern journeys, visa concierge, and private travel services.",
+      },
     ],
   }),
   component: Testimonials,
@@ -19,25 +23,29 @@ const reviews = [
   {
     name: "A. Pavlova",
     origin: "Geneva, Switzerland",
-    quote: "Everything was handled before I even landed in Dubai. The meet and greet, visa verification, and hotel transfers were absolute perfection. Cloud Life is the only agency I trust with my family's itineraries.",
+    quote:
+      "Everything was handled before I even landed in Dubai. The meet and greet, visa verification, and hotel transfers were absolute perfection. Cloud Life is the only agency I trust with my family's itineraries.",
     rating: 5,
   },
   {
     name: "Marcus Sterling",
     origin: "London, UK",
-    quote: "Our bespoke tour of the Empty Quarter desert camp was an unforgettable experience. The Bedouin storytelling session under the stars, combined with modern luxury amenities, is exactly what we wanted.",
+    quote:
+      "Our bespoke tour of the Empty Quarter desert camp was an unforgettable experience. The Bedouin storytelling session under the stars, combined with modern luxury amenities, is exactly what we wanted.",
     rating: 5,
   },
   {
     name: "Hassan Al-Mansoori",
     origin: "Riyadh, Saudi Arabia",
-    quote: "Extremely professional visa concierge team. I needed visa changes for our business group on an urgent basis and they delivered in under 24 hours. Reliable and discreet.",
+    quote:
+      "Extremely professional visa concierge team. I needed visa changes for our business group on an urgent basis and they delivered in under 24 hours. Reliable and discreet.",
     rating: 5,
   },
   {
     name: "Elena Rostova",
     origin: "Munich, Germany",
-    quote: "The Swiss Alps & Paris Classic tour package was seamlessly organized. From train tickets to private guides and Michelin-starred dining reservations, they didn't miss a single detail.",
+    quote:
+      "The Swiss Alps & Paris Classic tour package was seamlessly organized. From train tickets to private guides and Michelin-starred dining reservations, they didn't miss a single detail.",
     rating: 5,
   },
 ];
@@ -49,7 +57,12 @@ function Testimonials() {
       <main className="bg-canvas text-brand">
         <PageHero
           eyebrow="Guest Reviews"
-          title={<>Stories of <br /><span className="not-italic">Journeys.</span></>}
+          title={
+            <>
+              Stories of <br />
+              <span className="not-italic">Journeys.</span>
+            </>
+          }
           subtitle="Discover feedback from global travelers who entrust their luxury experiences and journeys to Cloud Life."
           image={alps}
           alt="Luxury travel scene"
@@ -65,7 +78,10 @@ function Testimonials() {
 
             <div className="grid md:grid-cols-2 gap-8">
               {reviews.map((r, i) => (
-                <div key={i} className="bg-white border border-brand/10 p-8 sm:p-12 rounded-2xl shadow-[0_4px_24px_rgba(23,42,81,0.02)] flex flex-col justify-between relative group hover:border-accent/40 transition-all duration-300">
+                <div
+                  key={i}
+                  className="bg-white border border-brand/10 p-8 sm:p-12 rounded-2xl shadow-[0_4px_24px_rgba(23,42,81,0.02)] flex flex-col justify-between relative group hover:border-accent/40 transition-all duration-300"
+                >
                   <div className="absolute top-8 right-8 text-accent/10">
                     <Quote className="w-12 h-12" />
                   </div>
